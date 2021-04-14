@@ -2,8 +2,8 @@
 
 ## _This instruction is based on following websites_ :
 
-- http://cerldev.kek.jp/trac/EpicsUsersJP/wiki/epics/install/epics_base
-- https://www.programmersought.com/article/30756036224/
+- <http://cerldev.kek.jp/trac/EpicsUsersJP/wiki/epics/install/epics_base>
+- <https://www.programmersought.com/article/30756036224/>
 
 ## 1. Install necessary packages
 
@@ -181,7 +181,7 @@ Open new window of the terminal, and type following command.
 $ camonitor dev_beamline_sys:ai1
 ```
 
-If you successfully connected, you got messages like this.
+Maybe you got messages like this.
 
 ```shell
 dev_beamline_sys:ai1           2021-04-14 23:13:07.326747 6 HIGH MINOR
