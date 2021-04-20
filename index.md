@@ -4,6 +4,11 @@
 ## EPICS on Docker
 [Install Docker and run EPICS image](docs/Install_Docker_on_CentOS7.md)
 
+## Links
+[EPICS Home](https://epics-controls.org/)
+[EPICS PV Gateway](https://epics.anl.gov/extensions/gateway/index.php)
+[KEK EPICS Information](http://cerldev.kek.jp/trac/EpicsUsersJP/)
+
 ## Documents
 ### Power supply
 [TAKASAGO TC-L2S instruction manual](https://doc-0c-44-docs.googleusercontent.com/docs/securesc/a1bs3gmqo5oiaccr91vk09uvln8tmm1l/0otitt3q877sa7jr5t85mf3cq7uoaalo/1618449300000/15400319780797693578/10733050059106369221/1fxqEj5c0LfqGqDLE6VaqNW2Og1NjhqCc?e=download&authuser=0&nonce=tnl9ucec7vcte&user=10733050059106369221&hash=8cdvb0pemhl9gstntpuj23g8erpq9ffg)  
