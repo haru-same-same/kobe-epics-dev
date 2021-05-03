@@ -9,7 +9,7 @@ ENV WORK_DIR=/usr/local/epics
 
 ENV EPICS_VER=3.15.8 \
     USER=epics-dk \
-    EPICS_BASE=${WORK_DIR}/base-${EPICS_VER}
+    EPICS_BASE=${WORK_DIR}/base-${EPICS_VER} \
     EPICS_HOST_ARCH=linux-x86_64 \
     PATH=${PATH}:${EPICS_BASE}/bin/${EPICS_HOST_ARCH}
 
