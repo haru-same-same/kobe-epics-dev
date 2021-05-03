@@ -1,6 +1,9 @@
 # Builder image
 FROM centos:7.9.2009 AS builder
 
+# Maintainer
+LABEL maintainer="abes <abes@stu.kobe-u.ac.jp>"
+
 # Setting variables
 ENV WORK_DIR=/usr/local/epics
 
