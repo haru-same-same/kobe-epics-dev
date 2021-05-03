@@ -32,12 +32,11 @@ RUN mkdir /pkgs \
     && cp --parents /lib64/libtinfo.so.5 /pkgs
 
 # Download and install epics
-RUN wget -q https://epics.anl.gov/download/base/base-${EPICS_VER}.tar.gz \
+RUN mkdir ${WORK_DIR} && cd $_ \
+    && wget -q https://epics.anl.gov/download/base/base-${EPICS_VER}.tar.gz \
     && tar -zxvf base-${EPICS_VER}.tar.gz \
-    && mkdir ${WORK_DIR} \
-    && mv base-${EPICS_VER} ${WORK_DIR} \
     && rm base-${EPICS_VER}.tar.gz \
-    && cd ${EPICS_BASE} \
+    && cd base-${EPICS_VER} \
     && make \
     && yum remove -y wget gcc-c++ readline-devel perl-devel make
 
