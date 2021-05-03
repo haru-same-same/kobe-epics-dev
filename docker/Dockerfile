@@ -32,7 +32,7 @@ RUN mkdir /pkgs \
     && cp --parents /lib64/libtinfo.so.5 /pkgs
 
 # Download and install epics
-RUN wget -q https://epics.anl.gov/download/base/base-$EPICS_VER.tar.gz \
+RUN wget -q https://epics.anl.gov/download/base/base-${EPICS_VER}.tar.gz \
     && tar -zxvf base-${EPICS_VER}.tar.gz \
     && mkdir ${WORK_DIR} \
     && mv base-${EPICS_VER} ${WORK_DIR} \
