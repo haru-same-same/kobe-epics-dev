@@ -29,7 +29,7 @@ RUN mkdir /pkgs \
     && cp --parents /lib64/libreadline.so.6 /pkgs \
     && cp --parents /lib64/librt.so.1 /pkgs \
     && cp --parents /lib64/libdl.so.2 /pkgs \
-    && cp --parents /lib64/libtinfo.so.5 /pkgs \
+    && cp --parents /lib64/libtinfo.so.5 /pkgs
 
 # Download and install epics
 RUN wget -q https://epics.anl.gov/download/base/base-$EPICS_VER.tar.gz \
