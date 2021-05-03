@@ -1,5 +1,7 @@
 # EPICS install on CentOS7
 
+[Back to main page](../index.md)
+
 ## _This instruction is based on following websites_ :
 
 - <http://cerldev.kek.jp/trac/EpicsUsersJP/wiki/epics/install/epics_base>
@@ -214,4 +216,30 @@ dev_beamline_sys:ai1           2021-04-14 23:13:33.326737 2 LOLO MAJOR
 dev_beamline_sys:ai1           2021-04-14 23:13:34.326814 3 LOW MINOR
 dev_beamline_sys:ai1           2021-04-14 23:13:35.326713 4 LOW MINOR
 ```
+
+## Trouble shooting
+
+### PV not found
+
+```shell
+$ camonitor dev_beamline_sys:ai1
+dev_beamline_sys:ai1             *** Not connected (PV not found)
+```
+
+If you got an error like this, firstly you should check port setting.
+
+Execute nc command in client PC while IOC server is running.
+
+```shell
+$ nc -vz serverIP 5064
+Connection to serverIP port 5064 [tcp/ca-1] succeeded!
+```
+
+If you get a message like this, let's try this command (Please refer to [this slide (KEK)](http://www-linac.kek.jp/cont/epics/epics-ihep-2001/Configuration2.pdf)).
+
+```shell
+$ export EPICS_CA_ADDR_LIST="serverIP"
+```
+
+
 
