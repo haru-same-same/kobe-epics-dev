@@ -1,0 +1,5 @@
+record(calc, "test:count") {
+    field(SCAN, ".1 second")
+    field(INPA, "test:count.VAL")
+    field(CALC, "A+1")
+}
