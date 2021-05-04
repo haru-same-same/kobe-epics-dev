@@ -1,8 +1,18 @@
 # Builder image
-FROM centos:7.9.2009 AS builder
+FROM --platform=${TARGETPLATFORM} centos:7.9.2009 AS base
 
 # Maintainer
 LABEL maintainer="abes <abes@stu.kobe-u.ac.jp>"
+
+# Images for multi platform
+FROM base AS builder-amd64
+ENV EPICS_HOST_ARCH=linux-x86_64
+
+FROM base AS builder-arm64
+ENV EPICS_HOST_ARCH=linux-arm
+
+# Choose builder
+FROM builder-${TARGETARCH} AS builder
 
 # Setting variables
 ENV WORK_DIR=/usr/local/epics
@@ -10,7 +20,6 @@ ENV WORK_DIR=/usr/local/epics
 ENV EPICS_VER=3.15.8 \
     USER=epics-dk \
     EPICS_BASE=${WORK_DIR}/base-${EPICS_VER} \
-    EPICS_HOST_ARCH=linux-x86_64 \
     PATH=${PATH}:${EPICS_BASE}/bin/${EPICS_HOST_ARCH}
 
 # Update yum and install necessary packages

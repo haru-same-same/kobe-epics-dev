@@ -1,0 +1,13 @@
+version: '3.8'
+services: 
+  softioc:
+    image: abes0/kobe-bl-epics:softioc-latest
+    tty: true
+    stdin_open: true
+    hostname: kobe-bl-epics
+    container_name: kobe-bl-epics-softioc
+    ports: 
+      - '5064-5065:5064-5065/tcp'
+      - '5064-5065:5064-5065/udp'
+    volumes: 
+      - ../db:/db
