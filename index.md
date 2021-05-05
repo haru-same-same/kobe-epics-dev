@@ -1,6 +1,7 @@
 ## EPICS Installation
 
-[How to install on CentOS7](docs/EPICS_install_on_Centos7.md)
+[How to install on CentOS7](docs/EPICS_install_on_Centos7.md)  
+[How to install asyn driver and StreamDevice](docs/Install_asyndriver_and_StreamDevice.md)
 
 ## EPICS on Docker
 
