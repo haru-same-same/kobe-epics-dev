@@ -279,7 +279,7 @@ Next, execute the record 'test:getDOR'
 ```shell
 epics> dbpf test:getDOR  PROC 1
 DBR_STRING:          "PROC"   
-epics> 2021/05/05 21:56:40.713125 PS1 test:getDOR: Timeout after reading 5 bytes "@DO00"
+2021/05/05 21:56:40.713125 PS1 test:getDOR: Timeout after reading 5 bytes "@DO00"
 ```
 
 Maybe the error is not so critical
