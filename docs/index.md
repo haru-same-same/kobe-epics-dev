@@ -1,14 +1,14 @@
 ## EPICS Installation
 
-[How to install on CentOS7](docs/EPICS_install_on_Centos7.md)  
-[How to install asyn driver and StreamDevice](docs/Install_asyndriver_and_StreamDevice.md)  
-[Connecting test to power supply via epics](docs/Connecting_test_to_PS_via_epics.md)
+[How to install on CentOS7](posts/EPICS_install_on_Centos7.md)  
+[How to install asyn driver and StreamDevice](posts/Install_asyndriver_and_StreamDevice.md)  
+[Connecting test to power supply via epics](posts/Connecting_test_to_PS_via_epics.md)
 
 ## EPICS on Docker
 
 [abes0/kobe-bl-epics Docker Hub repository](https://hub.docker.com/r/abes0/kobe-bl-epics)  
-[Install Docker and run EPICS image](docs/Install_Docker_on_CentOS7.md)  
-[PSTestApp on Docker](docs/PSTestApp_on_Docker)
+[Install Docker and run EPICS image](posts/Install_Docker_on_CentOS7.md)  
+[PSTestApp on Docker](posts/PSTestApp_on_Docker)
 
 ## Links
 
