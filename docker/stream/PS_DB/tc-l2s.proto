@@ -1,0 +1,6 @@
+Terminator = CR LF;
+MaxInput=5;
+getDOR {
+  out "@DOR?";
+  in "%5c";
+}

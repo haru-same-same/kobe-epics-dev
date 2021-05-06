@@ -1,0 +1,6 @@
+record(stringin, "test:getDOR")
+{
+  field(DESC, "get status from PS")
+  field(DTYP, "stream")
+  field(INP, "@tc-l2s.proto getdor PS1")
+}
