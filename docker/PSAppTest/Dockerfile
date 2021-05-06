@@ -7,6 +7,7 @@ LABEL maintainer="abes <abes@stu.kobe-u.ac.jp>"
 # Setting variables
 ENV EPICS_VER=3.15.8 \
     ASYN_VER=4-38 \
+    EPICS_HOST_ARCH=linux-x86_64 \
     WORK_DIR=/usr/local/epics \
     MOD_DIR=${EPICS_BASE}/modules \
     STREAM_DIR=${MOD_DIR}/StreamDevice \

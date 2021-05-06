@@ -1,6 +1,17 @@
-Terminator = CR LF;
-MaxInput=5;
-getDOR {
+OutTerminator = CR LF;
+InTerminator  = LF;
+
+readDOR {
   out "@DOR?";
   in "%5c";
+}
+
+readDIR {
+  out "@DIR?";
+  in "%5c";
+}
+
+setDOR {
+  out "@DO%2c";
+  in "%5c"
 }

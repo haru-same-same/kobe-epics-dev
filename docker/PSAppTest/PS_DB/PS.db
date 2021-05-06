@@ -1,6 +1,23 @@
-record(stringin, "test:getDOR")
+record(stringin, "test:readDOR")
 {
-  field(DESC, "get status from PS")
+  field(DESC, "Read status of PS")
   field(DTYP, "stream")
-  field(INP, "@tc-l2s.proto getdor PS1")
+  field(SCAN, "5 second")
+  field(INP, "@tc-l2s.proto readDOR PS1")
+}
+
+record(stringin, "test:readDIR")
+{
+  field(DESC, "Read status of PS")
+  field(DTYP, "stream")
+  field(SCAN, "5 second")
+  field(INP, "@tc-l2s.proto readDIR PS1")
+}
+
+record(stringout, "test:setDOR")
+{
+  field(DESC, "Set status of PS")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@tc-l2s.proto setDOR PS1")
 }
