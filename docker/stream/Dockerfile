@@ -105,14 +105,13 @@ COPY --from=builder /usr/local/epics .
 WORKDIR /
 COPY --from=builder /pkgs/lib64/*.so.* /lib64/
 WORKDIR /
-COPY --from=builder /PSApp /PSApp
+COPY --from=builder /PSApp .
 
 # Expose port
 EXPOSE 5064-5065/tcp
 EXPOSE 5064-5065/udp
 
 # Execute command
-ENTRYPOINT ["/PSApp/iocBoot/iocPSClient/st.cmd"]
-# CMD specifies arguments of entrypoint.
-# This variables can be overridden when this image is executed.
-#CMD ["-d", "/db/test.db"]
+WORKDIR ${APP_DIR}/iocBoot/iocPSClient
+ENTRYPOINT ["/bin/sh"]
+CMD ["st.cmd"]
