@@ -39,6 +39,7 @@ $ vim tc-l2s.proto # can edit
 Finally, build the image
 
 ```shell
+$ cd ../
 $ docker build . -t [user]/[name]:[tag]
 ```
 
