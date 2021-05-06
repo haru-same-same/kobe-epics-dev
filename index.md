@@ -6,7 +6,7 @@
 
 ## EPICS on Docker
 
-[abes0/kobe-bl-epics Docker Hub repository](https://hub.docker.com/repository/docker/abes0/kobe-bl-epics)  
+[abes0/kobe-bl-epics Docker Hub repository](https://hub.docker.com/r/abes0/kobe-bl-epics)  
 [Install Docker and run EPICS image](docs/Install_Docker_on_CentOS7.md)
 
 ## Links
