@@ -12,6 +12,11 @@ readDIR {
 }
 
 setDOR {
-  out "@DO%2c";
+  out "@DO%02u";
   in "%5c"
+}
+
+setADDR {
+  out "ADDRess %u";
+  in "%s"
 }

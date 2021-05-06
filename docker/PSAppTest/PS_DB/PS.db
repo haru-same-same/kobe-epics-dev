@@ -14,10 +14,18 @@ record(stringin, "test:readDIR")
   field(INP, "@tc-l2s.proto readDIR PS1")
 }
 
-record(stringout, "test:setDOR")
+record(longout, "test:setDOR")
 {
   field(DESC, "Set status of PS")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@tc-l2s.proto setDOR PS1")
+}
+
+record(longout, "test:setADDR")
+{
+  field(DESC, "Set device address")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@tc-l2s.proto setADDR PS1")
 }
