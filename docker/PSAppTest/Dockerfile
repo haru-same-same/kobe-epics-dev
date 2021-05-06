@@ -10,7 +10,8 @@ ENV EPICS_VER=3.15.8 \
     WORK_DIR=/usr/local/epics \
     MOD_DIR=${EPICS_BASE}/modules \
     STREAM_DIR=${MOD_DIR}/StreamDevice \
-    APP_DIR=/PSApp
+    APP_DIR=/PSApp \
+    USER=PSAppTest
 
 # Create IOC App
 RUN mkdir ${APP_DIR} && cd $_ \
@@ -24,8 +25,8 @@ RUN mkdir ${APP_DIR} && cd $_ \
     && echo "PSClient_DBD += drvAsynIPPort.dbd" >> PSClientApp/src/Makefile \
     && echo "PSClient_LIBS += asyn" >> PSClientApp/src/Makefile \
     && echo "PSClient_LIBS += stream" >> PSClientApp/src/Makefile \
-    && echo "DB += PSTest.db" >> PSClientApp/Db/Makefile \
-    && sed -i -e "s|#dbLoadRecords(\"db/xxx.db\",\"user=dev_beamline_sys\")|dbLoadRecords(\"db/PS.db\")\nepicsEnvSet(\"STREAM_PROTOCOL_PATH\", \".:../../PSTestClientApp/Db\")\ndrvAsynIPPortConfigure(\"PS1\", \"192.168.0.2:50001\")|g" iocBoot/iocPSClient/st.cmd
+    && sed -i -e "s|#DB += xxx.db|DB += PS.db|g" PSClientApp/Db/Makefile \
+    && sed -i -e "s|#dbLoadRecords(\"db/xxx.db\",\"user=${USER}\")|dbLoadRecords(\"db/PS.db\")\nepicsEnvSet(\"STREAM_PROTOCOL_PATH\", \".:../../PSClientApp/Db\")\ndrvAsynIPPortConfigure(\"PS1\", \"192.168.0.2:50001\")|g" iocBoot/iocPSClient/st.cmd
 
 # Copy Packages in order to use them in busybox
 RUN mkdir /pkgs \
@@ -42,10 +43,9 @@ WORKDIR ${APP_DIR}/PSClientApp/Db
 COPY /PS_DB/* .
 
 # Make app
-RUN cd ${APP_DIR} \
-    && make \
-    && chmod +x iocBoot/iocPSClient/st.cmd \
-    && yum remove -y wget gcc-c++ git readline-devel perl-devel make
+WORKDIR ${APP_DIR}
+RUN make \
+    && chmod +x iocBoot/iocPSClient/st.cmd
 
 # Runner image
 FROM busybox:1.33.0-glibc AS runner
@@ -56,13 +56,13 @@ COPY --from=builder /usr/local/epics .
 WORKDIR /
 COPY --from=builder /pkgs/lib64/*.so.* /lib64/
 WORKDIR /
-COPY --from=builder /PSApp .
+COPY --from=builder /PSApp /PSApp
 
 # Expose port
 EXPOSE 5064-5065/tcp
 EXPOSE 5064-5065/udp
 
 # Execute command
-WORKDIR ${APP_DIR}/iocBoot/iocPSClient
+WORKDIR PSApp/iocBoot/iocPSClient
 ENTRYPOINT ["/bin/sh"]
-#CMD ["st.cmd"]
+CMD ["-c", "./st.cmd"]
