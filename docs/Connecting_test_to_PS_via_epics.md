@@ -2,6 +2,12 @@
 
 [Back to main page](../index.md)
 
+## _This instruction is based on following websites_ :
+
+- <http://cerldev.kek.jp/trac/EpicsUsersJP/raw-attachment/wiki/intro/20150318_KEKB/EPICS_Training_KEK.pdf>
+- <http://cerldev.kek.jp/trac/EpicsUsersJP/raw-attachment/wiki/intro/20181101_KEK/ET2018_StreamDevice_20181029.pdf>
+- <http://cerldev.kek.jp/trac/EpicsUsersJP/raw-attachment/wiki/epics/streamdevice/Intro_StreamDevice.pdf>
+
 ## 1. Craete IOC
 
 ### Make app from template
