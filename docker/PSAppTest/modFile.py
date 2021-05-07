@@ -12,13 +12,13 @@ def main():
     cmd_path = '/PSApp/iocBoot/iocPSClient/'
     
     # Dictionary of IP, port
-    ip_dict = {PS1: '10.37.0.196:50001'}
+    ip_dict = {'PS1': '10.37.0.196:50001'}
     
     # Create list of .db and .proto file
     db_list = glob(db_path + '*.db')
     db_list = [os.path.basename(idb) for idb in db_list]
     proto_list = glob(db_path + '*.proto')
-    proto_list = [os.path.basename(iproto) for iproto in ptroto_list]
+    proto_list = [os.path.basename(iproto) for iproto in proto_list]
     
     # Create RELEASE.local and edit
     cont_release = ['ASYN=' + work_dir + '/base-' + epics_ver + '/modules/asyn' + asyn_ver + '\n',
@@ -37,15 +37,29 @@ def main():
     
     # Edit Db/Makefile
     cont_dbmk = ['DB += ' + idb + '\n' for idb in db_list]
-    with open(db_path + 'Makefile', mode = 'a') as f_dbmk:
-        f_dbmk.writelines(cont_dbmk)
+    cont_dbmk_u = []
+    cont_dbmk_d = []
+    find_flag = False
+    with open(db_path + 'Makefile', mode = 'r') as f_dbmk:
+        for row in f_dbmk:
+            if not find_flag:
+                cont_dbmk_u.append(row)
+            else:
+                cont_dbmk_d.append(row)
+            if 'DB += xxx.db' in row:
+                find_flag = True
+    
+    cont_dbmk_u.extend(cont_dbmk)
+    cont_dbmk_u.extend(cont_dbmk_d)
+    with open(db_path + 'Makefile', mode = 'w') as f_dbmk_w:
+        f_dbmk_w.writelines(cont_dbmk_u)
     
     # Edit st.cmd
     cont_dbrcd = ['dbLoadRecords("db/' + idb + '")\n' for idb in db_list]
     cont_ipport = ['drvAsynIPPortConfigure("' + ikey + '", "' + ip_dict[ikey] + '")\n' for ikey in ip_dict.keys()]
     cont_envset = 'epicsEnvSet("STREAM_PROTOCOL_PATH", ".:../../PSClientApp/Db")\n'
-    cont_cmd_i = cont_dbrcd.append(cont_envset)
-    cont_cmd_i.extend(cont_ipport)
+    cont_dbrcd.append(cont_envset)
+    cont_dbrcd.extend(cont_ipport)
     cont_cmd_u = []
     cont_cmd_d = []
     find_flag = False
@@ -55,13 +69,13 @@ def main():
                 cont_cmd_u.append(row)
             else:
                 cont_cmd_d.append(row)
-            if '#dbLoadRecords("db/xxx.db","user=${USER}")' in row:
+            if 'dbLoadRecords' in row:
                 find_flag = True
     
-    cont_cmd = cont_cmd_u.extend(cont_cmd_i)
-    cont_cmd.extend(cont_cmd_d)
+    cont_cmd_u.extend(cont_dbrcd)
+    cont_cmd_u.extend(cont_cmd_d)
     with open(cmd_path + 'st.cmd', mode = 'w') as f_cmd_w:
-        f_cmd_w.writelines(cont_cmd)
+        f_cmd_w.writelines(cont_cmd_u)
 
 if __name__ == '__main__':
     main()

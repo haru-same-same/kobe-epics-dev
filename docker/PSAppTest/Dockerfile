@@ -18,16 +18,16 @@ ENV EPICS_VER=3.15.8 \
 RUN mkdir ${APP_DIR} && cd $_ \
     && ${WORK_DIR}/base-${EPICS_VER}/bin/${EPICS_HOST_ARCH}/makeBaseApp.pl -t ioc PSClient \
     && ${WORK_DIR}/base-${EPICS_VER}/bin/${EPICS_HOST_ARCH}/makeBaseApp.pl -i -t ioc PSClient \
-    && echo \
-    && echo "ASYN=${WORK_DIR}/base-${EPICS_VER}/modules/asyn${ASYN_VER}" > configure/RELEASE.local\
-    && echo "STREAM=${WORK_DIR}/base-${EPICS_VER}/modules/StreamDevice" >> configure/RELEASE.local \
-    && echo "PSClient_DBD += asyn.dbd" >> PSClientApp/src/Makefile \
-    && echo "PSClient_DBD += stream.dbd" >> PSClientApp/src/Makefile \
-    && echo "PSClient_DBD += drvAsynIPPort.dbd" >> PSClientApp/src/Makefile \
-    && echo "PSClient_LIBS += asyn" >> PSClientApp/src/Makefile \
-    && echo "PSClient_LIBS += stream" >> PSClientApp/src/Makefile \
-    && sed -i -e "s|#DB += xxx.db|DB += PS.db|g" PSClientApp/Db/Makefile \
-    && sed -i -e "s|#dbLoadRecords(\"db/xxx.db\",\"user=${USER}\")|dbLoadRecords(\"db/PS.db\")\nepicsEnvSet(\"STREAM_PROTOCOL_PATH\", \".:../../PSClientApp/Db\")\ndrvAsynIPPortConfigure(\"PS1\", \"10.37.0.196:50001\")|g" iocBoot/iocPSClient/st.cmd
+    && echo
+    #&& echo "ASYN=${WORK_DIR}/base-${EPICS_VER}/modules/asyn${ASYN_VER}" > configure/RELEASE.local\
+    #&& echo "STREAM=${WORK_DIR}/base-${EPICS_VER}/modules/StreamDevice" >> configure/RELEASE.local \
+    #&& echo "PSClient_DBD += asyn.dbd" >> PSClientApp/src/Makefile \
+    #&& echo "PSClient_DBD += stream.dbd" >> PSClientApp/src/Makefile \
+    #&& echo "PSClient_DBD += drvAsynIPPort.dbd" >> PSClientApp/src/Makefile \
+    #&& echo "PSClient_LIBS += asyn" >> PSClientApp/src/Makefile \
+    #&& echo "PSClient_LIBS += stream" >> PSClientApp/src/Makefile \
+    #&& sed -i -e "s|#DB += xxx.db|DB += PS.db|g" PSClientApp/Db/Makefile \
+    #&& sed -i -e "s|#dbLoadRecords(\"db/xxx.db\",\"user=${USER}\")|dbLoadRecords(\"db/PS.db\")\nepicsEnvSet(\"STREAM_PROTOCOL_PATH\", \".:../../PSClientApp/Db\")\ndrvAsynIPPortConfigure(\"PS1\", \"10.37.0.196:50001\")|g" iocBoot/iocPSClient/st.cmd
 
 # Copy Packages in order to use them in busybox
 RUN mkdir /pkgs \
@@ -45,10 +45,11 @@ COPY /PS_DB/* .
 
 # Modify setting files using python script (To be implemented)
 # Copy python script from local
-#WORKDIR /
-#COPY modFile.py .
+WORKDIR /
+COPY modFile.py .
 
 #RUN python modFile.py
+RUN python modFile.py ${WORK_DIR} ${EPICS_VER} ${ASYN_VER} ${USER}
 
 # Make app
 WORKDIR ${APP_DIR}
