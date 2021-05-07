@@ -1,6 +1,8 @@
 OutTerminator = CR LF;
 InTerminator  = LF;
 
+MaxInput=5;
+
 readDOR {
   out "@DOR?";
   in "%5c";
