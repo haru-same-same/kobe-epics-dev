@@ -34,16 +34,24 @@ services:
       - ARCHAPPL_PERSISTENCE_LAYER: "org.epics.archiverappliance.config.persistence.RedisPersistence"
       - ARCHAPPL_PERSISTENCE_LAYER_REDISURL: "redis-db"
     depends_on: 
-      - mysql-db
+      #- mysql-db
+      - redis-db
     links:
-      - mysql-db
+      #- mysql-db
+      - redis-db
       - psapp-test
   
-  mysql-db:
-    image: mysql
+  #mysql-db:
+  #  image: mysql
+  #  volumes:
+  #    - ./aa-storage:/data
+  #  command: 
+  
+  redis-db:
+    image: redis
     volumes:
-      - ./aa-storage:/data
-    command: 
+      - ./redis-storage:/data
+    command: redis-server --appendonly yes
   
   psapp-test:
     image: abes0/psapptest:latest
