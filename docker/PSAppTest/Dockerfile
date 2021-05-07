@@ -27,7 +27,7 @@ RUN mkdir ${APP_DIR} && cd $_ \
     && echo "PSClient_LIBS += asyn" >> PSClientApp/src/Makefile \
     && echo "PSClient_LIBS += stream" >> PSClientApp/src/Makefile \
     && sed -i -e "s|#DB += xxx.db|DB += PS.db|g" PSClientApp/Db/Makefile \
-    && sed -i -e "s|#dbLoadRecords(\"db/xxx.db\",\"user=${USER}\")|dbLoadRecords(\"db/PS.db\")\nepicsEnvSet(\"STREAM_PROTOCOL_PATH\", \".:../../PSClientApp/Db\")\ndrvAsynIPPortConfigure(\"PS1\", \"192.168.0.2:50001\")|g" iocBoot/iocPSClient/st.cmd
+    && sed -i -e "s|#dbLoadRecords(\"db/xxx.db\",\"user=${USER}\")|dbLoadRecords(\"db/PS.db\")\nepicsEnvSet(\"STREAM_PROTOCOL_PATH\", \".:../../PSClientApp/Db\")\ndrvAsynIPPortConfigure(\"PS1\", \"10.37.0.196:50001\")|g" iocBoot/iocPSClient/st.cmd
 
 # Copy Packages in order to use them in busybox
 RUN mkdir /pkgs \
