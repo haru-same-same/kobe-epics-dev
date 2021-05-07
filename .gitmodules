@@ -1,0 +1,3 @@
+[submodule "docker/ps-aa-grafana/archiverappliance-datasource"]
+	path = docker/ps-aa-grafana/archiverappliance-datasource
+	url = https://github.com/sasaki77/archiverappliance-datasource.git
