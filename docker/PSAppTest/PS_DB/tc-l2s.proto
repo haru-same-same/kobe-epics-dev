@@ -5,20 +5,21 @@ MaxInput=5;
 
 readDOR {
   out "@DOR?";
-  in "%5c";
+  in "%s";
 }
 
 readDIR {
   out "@DIR?";
-  in "%5c";
+  in "%s";
 }
 
 setDOR {
   out "@DO%02u";
-  in "%5c"
+  in "@DONE";
+  @mismatch{in "@ERR1";}
+  @mismatch{in "@ERR2";}
 }
 
 setADDR {
   out "ADDRess %u";
-  in "%s"
 }
