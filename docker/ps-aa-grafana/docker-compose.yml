@@ -1,0 +1,55 @@
+version: 3.8
+volumes:
+  grafana-storage:
+  aa-storage:
+
+services: 
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./archiverappliance-datasource:/var/lib/grafana/plugins/archiverappliance-datasource
+      - ./grafana-storage:/var/lib/grafana
+    environment:
+      - GF_LOG_LEVEL=debug
+      - GF_DATAPROXY_LOGGING=true
+  
+  archappl:
+    hostname: archappl
+    image: abes0/archiver-appliance:latest
+    ports:
+      - '17655:17655'
+    volumes:
+      - ./aa-storage/sts:/storage/sts
+      - ./aa-storage/mts:/storage/mts
+      - ./aa-storage/lts:/storage/lts
+      - ./aa-storage/logs:/storage/logs
+    stdin_open: true
+    tty: true
+    environment:
+      - ARCHAPPL_ALL_APPS_ON_ONE_JVM: "true"
+      #- EPICS_CA_ADDR_LIST: "127.0.0.1"
+      #- EPICS_CA_AUTO_ADDR_LIST: "no"
+      - ARCHAPPL_PERSISTENCE_LAYER: "org.epics.archiverappliance.config.persistence.RedisPersistence"
+      - ARCHAPPL_PERSISTENCE_LAYER_REDISURL: "redis-db"
+    depends_on: 
+      - mysql-db
+    links:
+      - mysql-db
+      - psapp-test
+  
+  mysql-db:
+    image: mysql
+    volumes:
+      - ./aa-storage:/data
+    command: 
+  
+  psapp-test:
+    image: abes0/psapptest:latest
+    ports:
+      - '5064-5065:5064-5065/tcp'
+      - '5064-5065:5064-5065/udp'
+    stdin_open: true
+    tty: true
+    restart: always
