@@ -43,6 +43,13 @@ RUN mkdir /pkgs \
 WORKDIR ${APP_DIR}/PSClientApp/Db
 COPY /PS_DB/* .
 
+# Modify setting files using python script (To be implemented)
+# Copy python script from local
+#WORKDIR /
+#COPY modFile.py .
+
+#RUN python modFile.py
+
 # Make app
 WORKDIR ${APP_DIR}
 RUN make \
