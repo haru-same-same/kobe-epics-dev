@@ -12,8 +12,9 @@ services:
       - ./archiverappliance-datasource:/var/lib/grafana/plugins/archiverappliance-datasource
       - ./grafana-storage:/var/lib/grafana
     environment:
-      - GF_LOG_LEVEL=debug
+      - GF_LOG_LEVEL=error
       - GF_DATAPROXY_LOGGING=true
+      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=sasaki77-archiverappliance-datasource
   
   archappl:
     hostname: archappl
