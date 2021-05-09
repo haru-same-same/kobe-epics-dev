@@ -43,7 +43,9 @@ COPY /etc/archappl/* /etc/archappl/
 RUN mkdir -p /storage/{sts, mts, lts, logs} \
     && ln -s /etc/archappl/log4j.properties /usr/local/tomcat/lib/log4j.properties \
     && mv /usr/local/tomcat/conf/server.xml{,.dist} \
-    && ln -s /etc/archappl/tomcat_conf_server.xml /usr/local/tomcat/conf/server.xml
+    && ln -s /etc/archappl/tomcat_conf_server.xml /usr/local/tomcat/conf/server.xml \
+    && rmdir /usr/local/tomcat/logs \
+    && ln -s /storage/logs /usr/local/tomcat/logs
 
 # Be generous with the heap
 ENV JAVA_OPTS="-XX:+UseG1GC -Xms4G -Xmx4G -ea"
