@@ -19,7 +19,10 @@ services:
     ports:
       - '17665:17665'
     volumes:
-      - ./aa-storage/:/storage
+      - ./aa-storage/sts:/storage/sts
+      - ./aa-storage/mts:/storage/mts
+      - ./aa-storage/lts:/storage/lts
+      - ./aa-storage/logs:/storage/logs
     stdin_open: true
     tty: true
     environment:
