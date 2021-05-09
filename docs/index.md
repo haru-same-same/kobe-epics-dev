@@ -8,7 +8,9 @@
 
 [abes0/kobe-bl-epics Docker Hub repository](https://hub.docker.com/r/abes0/kobe-bl-epics)  
 [Install Docker and run EPICS image](posts/Install_Docker_on_CentOS7.md)  
-[PSTestApp on Docker](posts/PSTestApp_on_Docker)
+[PSTestApp on Docker](posts/PSTestApp_on_Docker.md)  
+[Building Grafana docker image with package](posts/Building_grafana_docker_image_with_package.md)  
+[PSApp IOC and archiver with Grafana image on docker](PSApp_IOC_and_archiver_with_Grafana_image_on_docker.md)
 
 ## Links
 

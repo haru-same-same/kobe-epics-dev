@@ -2,11 +2,10 @@ version: '3.8'
 
 services: 
   grafana:
-    image: grafana/grafana:latest
+    image: abes0/grafana-aa:latest
     ports:
       - '3000:3000'
     volumes:
-      - ./archiverappliance-datasource:/var/lib/grafana/plugins/archiverappliance-datasource
       - ./grafana-storage:/var/lib/grafana
     environment:
       GF_LOG_LEVEL: 'error'
