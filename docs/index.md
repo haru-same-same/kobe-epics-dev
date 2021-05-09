@@ -10,7 +10,7 @@
 [Install Docker and run EPICS image](posts/Install_Docker_on_CentOS7.md)  
 [PSTestApp on Docker](posts/PSTestApp_on_Docker.md)  
 [Building Grafana docker image with package](posts/Building_grafana_docker_image_with_package.md)  
-[PSApp IOC and archiver with Grafana image on docker](PSApp_IOC_and_archiver_with_Grafana_image_on_docker.md)
+[PSApp IOC and archiver with Grafana image on docker](posts/PSApp_IOC_and_archiver_with_Grafana_image_on_docker.md)
 
 ## Links
 
