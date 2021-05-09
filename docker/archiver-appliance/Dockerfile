@@ -37,11 +37,7 @@ COPY --from=extractor /archiver_appliance/NOTICE \
 COPY --from=extractor /archiver_appliance/*.war /usr/local/tomcat/webapps/
 
 # Copy archapel file
-COPY --from=extractor /etc/archappl/appliances.xml \
-                      /etc/archappl/archappl.properties \
-                      /etc/archappl/policies.py \
-                      /etc/archappl/tomcat_conf_server.xml \
-                      /etc/archappl/log4j.properties /etc/archappl
+COPY /etc/archappl/* /etc/archappl/
 
 # Create directories we store data and linking 
 RUN mkdir -p /storage/{sts, mts, lts, logs} \
