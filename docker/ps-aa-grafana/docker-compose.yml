@@ -17,7 +17,7 @@ services:
     hostname: archappl
     image: abes0/archiver-appliance:latest
     ports:
-      - '17655:17655'
+      - '17665:17665'
     volumes:
       - ./aa-storage/sts:/storage/sts
       - ./aa-storage/mts:/storage/mts
@@ -56,6 +56,9 @@ services:
     ports:
       - '5064-5065:5064-5065/tcp'
       - '5064-5065:5064-5065/udp'
+    expose:
+      - '5064-5065/tcp'
+      - '5064-5065/udp'
     stdin_open: true
     tty: true
     restart: always

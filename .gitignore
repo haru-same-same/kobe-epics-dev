@@ -1,1 +1,5 @@
 /docker/ps-aa-grafana/archiverappliance-datasource
+/docker/ps-aa-grafana/aa-storage/*
+/docker/ps-aa-grafana/redis-storage/*
+/docker/ps-aa-grafana/grafana-storage/*
+!.gitkeep
