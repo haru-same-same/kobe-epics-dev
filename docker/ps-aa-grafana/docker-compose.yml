@@ -9,9 +9,9 @@ services:
       - ./archiverappliance-datasource:/var/lib/grafana/plugins/archiverappliance-datasource
       - ./grafana-storage:/var/lib/grafana
     environment:
-      - GF_LOG_LEVEL=error
-      - GF_DATAPROXY_LOGGING=true
-      - GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=sasaki77-archiverappliance-datasource
+      GF_LOG_LEVEL: 'error'
+      GF_DATAPROXY_LOGGING: 'true'
+      GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: 'sasaki77-archiverappliance-datasource'
   
   archappl:
     hostname: archappl
@@ -26,11 +26,11 @@ services:
     stdin_open: true
     tty: true
     environment:
-      - ARCHAPPL_ALL_APPS_ON_ONE_JVM='true'
-      #- EPICS_CA_ADDR_LIST="127.0.0.1"
-      #- EPICS_CA_AUTO_ADDR_LIST="no"
-      - ARCHAPPL_PERSISTENCE_LAYER='org.epics.archiverappliance.config.persistence.RedisPersistence'
-      - ARCHAPPL_PERSISTENCE_LAYER_REDISURL='redis-db'
+      ARCHAPPL_ALL_APPS_ON_ONE_JVM: 'true'
+      #EPICS_CA_ADDR_LIST: "127.0.0.1"
+      #EPICS_CA_AUTO_ADDR_LIST: "no"
+      ARCHAPPL_PERSISTENCE_LAYER: 'org.epics.archiverappliance.config.persistence.RedisPersistence'
+      ARCHAPPL_PERSISTENCE_LAYER_REDISURL: 'redis-db'
     depends_on: 
       #- mysql-db
       - redis-db
