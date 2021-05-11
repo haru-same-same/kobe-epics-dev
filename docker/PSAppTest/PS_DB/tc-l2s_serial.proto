@@ -1,0 +1,11 @@
+OutTerminator = CR LF;
+InTerminator  = LF;
+
+serialSend {
+  out "Serial test message from ioc:%u";
+}
+
+serialReceive {
+  in "serialIn:%s";
+  @mismatch{;}
+}

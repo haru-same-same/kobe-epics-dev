@@ -1,0 +1,15 @@
+record(ao, "test:serialSend")
+{
+  field(DESC, "Serial send test")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@tc-l2s_serial.proto serialSend PS1")
+}
+
+record(stringin, "test:serialReceive")
+{
+  field(DESC, "Serial receive test")
+  field(DTYP, "stream")
+  field(SCAN, "I/O Intr")
+  field(INP, "@tc-l2s_serial.proto serialReceive PS1")
+}

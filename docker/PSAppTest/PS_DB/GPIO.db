@@ -3,7 +3,7 @@ record(stringin, "test:readDOR")
   field(DESC, "Read status of PS")
   field(DTYP, "stream")
   field(SCAN, "Passive")
-  field(INP, "@tc-l2s.proto readDOR PS1")
+  field(INP, "@tc-l2s_gpio.proto readDOR PS1")
   field(PINI, "YES")
 }
 
@@ -12,7 +12,7 @@ record(stringin, "test:readDIR")
   field(DESC, "Read status of PS")
   field(DTYP, "stream")
   field(SCAN, "Passive")
-  field(INP, "@tc-l2s.proto readDIR PS1")
+  field(INP, "@tc-l2s_gpio.proto readDIR PS1")
   field(PINI, "YES")
 }
 
@@ -21,14 +21,6 @@ record(ao, "test:setDOR")
   field(DESC, "Set status of PS")
   field(DTYP, "stream")
   field(SCAN, "Passive")
-  field(OUT, "@tc-l2s.proto setDOR PS1")
+  field(OUT, "@tc-l2s_gpio.proto setDOR PS1")
   field(FLNK, "test:readDOR PP NMS")
-}
-
-record(stringout, "test:setADDR")
-{
-  field(DESC, "Set device address")
-  field(DTYP, "stream")
-  field(SCAN, "Passive")
-  field(OUT, "@tc-l2s.proto setADDR PS1")
 }

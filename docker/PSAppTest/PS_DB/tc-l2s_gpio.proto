@@ -19,7 +19,3 @@ setDOR {
   @mismatch{in "@ERR1";}
   @mismatch{in "@ERR2";}
 }
-
-setADDR {
-  out "ADDRess %u";
-}
