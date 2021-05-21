@@ -10,7 +10,13 @@ record(stringin, "test:serialReceive")
 {
   field(DESC, "Serial receive test")
   field(DTYP, "stream")
-  field(TSE, "-2")
   field(SCAN, "I/O Intr")
   field(INP, "@tc-l2s_serial.proto serialReceive PS1")
+}
+
+record(stringin, "test:serialRead")
+{
+  field(DESC, "Readback serialReceive")
+  field(SCAN, "1 second")
+  field(INP, "test:serialReceive")
 }
