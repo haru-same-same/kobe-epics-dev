@@ -19,7 +19,13 @@
 [KEK EPICS Information](http://cerldev.kek.jp/trac/EpicsUsersJP/)
 
 ## Documents
+
 ### Power supply
-[TAKASAGO TC-L2S instruction manual](https://doc-0c-44-docs.googleusercontent.com/docs/securesc/a1bs3gmqo5oiaccr91vk09uvln8tmm1l/0otitt3q877sa7jr5t85mf3cq7uoaalo/1618449300000/15400319780797693578/10733050059106369221/1fxqEj5c0LfqGqDLE6VaqNW2Og1NjhqCc?e=download&authuser=0&nonce=tnl9ucec7vcte&user=10733050059106369221&hash=8cdvb0pemhl9gstntpuj23g8erpq9ffg)  
+
+[TAKASAGO TC-L2S instruction manual](https://www.takasago-ss.co.jp/file/b4c258e247e83070e711f66e02553905.pdf)  
 [TAKASAGO HX-S-G2 instruction manual](https://www.takasago-ss.co.jp/file/c40aba448422a97eb8fd4583e33a309d.pdf)  
 [TAKASAGO HX-S-G2 software manual](https://www.takasago-ss.co.jp/file/d67da255fa523d6364e8645bfa87bef0.pdf)
+
+## Contribute to this page:
+
+This page is published on Github Pages. Please create pull request to add new post.
