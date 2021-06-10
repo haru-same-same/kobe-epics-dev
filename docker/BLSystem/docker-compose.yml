@@ -1,0 +1,46 @@
+version: 3.8
+
+services:
+  gateway:
+    image: abes0/epics-gateway:latest
+    ports: 
+      - '5064-5065:5064-5065/tcp'
+      - '5064-5065:5064-5065/udp'
+    restart: always
+    environment:
+      cip: ''
+      sip: ''
+  
+  ioc:
+    image:
+    ports: 
+      - '5064-5065:5064-5065/tcp'
+      - '5064-5065:5064-5065/udp'
+    restart: always
+  
+  database:
+    image: mariadb:10.5
+    expose: 
+      - '3306'
+    volumes:
+    environment:
+    restart: always
+  
+  server:
+    image:
+    ports:
+    restart: always
+    depends_on:
+      - database
+  
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - '3000:3000'
+    volumes:
+    environment:
+      GF_LOG_LEVEL: 'error'
+      GF_DATAPROXY_LOGGING: 'true'
+    depends_on:
+      - database
+  
