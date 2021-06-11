@@ -5,4 +5,6 @@
 /docker/ps-aa-grafana/aa-storage/sts/*
 /docker/ps-aa-grafana/redis-storage/*
 /docker/ps-aa-grafana/grafana-storage/*
+/docker/base-cafe/src/cafeTest
+/docker/base-cafe/src/cafeTest_.cc
 !.gitkeep

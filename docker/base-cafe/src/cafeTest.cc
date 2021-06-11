@@ -25,16 +25,7 @@ int main()
     CAFE *cafe = new CAFE();
     cafe->channelOpenPolicy.setTimeout(0.5);
     
-    /*
-    try {
-        cafe->open(pvArray[0].c_str(), handle);
-    }
-    catch(CAFEException_open &e) {
-        cout << e.what() << endl;
-        exit(1);
-    }
-    */
-    
+    //Open PVs
     try {
         cafe->openPrepare();		 		 
         cafe->open(pvArray,  hArray, HANDLES);					
@@ -51,4 +42,21 @@ int main()
         cout << e.what() << endl;
     }
     
+    //Get PV values
+    unsigned short val_ai1;
+    status = cafe->get(hArray[0], val_ai1);
+    
+    if(status != ICAFE_NORMAL) {
+        cout << "Status = " << status << "; indicates an error at " << __METHOD__ << "//" << __LINE__ << endl;
+        cafe->getCafeStatus().report(status);	
+        if (cafe->getCafeStatus().isTimeout(status)) {
+            cout << "Timeout error" << endl;	
+        }
+    } else {
+        cout << "Value of ai1 = " << val_ai1 << endl;
+    }
+    
+    //Termination
+    cafe->terminate();
+    return 0;
 }
