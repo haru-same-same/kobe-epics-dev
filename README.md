@@ -44,7 +44,7 @@ CAFEを試すためのdocker-compose.ymlも準備しているので、以下の�
 # terminal 1
 
 $ cd docker/base-cafe
-$ docker-compose up
+$ docker-compose up -d
 $ docker exec -it base-cafe_base_1 /bin/bash
 (container)$ ./st.cmd # test ioc起動
 
