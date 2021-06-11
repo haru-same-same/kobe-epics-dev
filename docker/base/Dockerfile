@@ -25,6 +25,10 @@ RUN mkdir ${WORK_DIR} && cd ${WORK_DIR} \
     && cd base-${EPICS_VER} \
     && make
 
+ENV EPICS=/usr/local/epics \
+    EPICS_HOST_ARCH=linux-x86_64 \
+    PATH=$PATH:/usr/local/epics/base-${EPICS_VER}/bin/linux-x86_64
+
 # Expose port
 EXPOSE 5064-5065/tcp
 EXPOSE 5064-5065/udp
