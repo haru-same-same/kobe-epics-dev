@@ -53,6 +53,7 @@ $ docker exec -it base-cafe_base_1 /bin/bash
 $ docker exec -it base-cafe_cafe_1 /bin/bash
 (container)$ make
 (container)$ ./cafeTest
+Value of ai1 = 5
 ```
 
 
