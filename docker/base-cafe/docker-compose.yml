@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  base:
+    image: abes0/epics-base:latest
+    expose: 
+      - '5064-5065'
+      - '5064-5065/udp'
+    volumes:
+      - ./app:/home/app
+    working_dir: /home/app/iocBoot/ioctest/
+    command:
+      - /bin/bash
+    stdin_open: true
+    tty: true
+  
+ 
+  cafe:
+    image: abes0/epics-cafe:latest
+    volumes:
+      - ./src:/home/src
+    working_dir: /home/src/
+    command:
+      - /bin/bash
+    stdin_open: true
+    tty: true
