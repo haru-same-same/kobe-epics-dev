@@ -1,8 +1,8 @@
 #include <cafe.h>
 #include "callbacks.h"
 
-#define PV_AI1 "abes:ai1"
-#define PV_AI2 "abes:ai2"
+#define PV_AI1 "root:ai1"
+#define PV_AI2 "root:ai2"
 
 #define HANDLES 2
 
