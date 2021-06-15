@@ -2,6 +2,11 @@
 
 [Back to main page](../index.md)
 
+## Streamdevice references
+- <https://slidesplayer.net/slide/11237129/>
+- <http://cerldev.kek.jp/trac/EpicsUsersJP/wiki/epics/streamdevice>
+- <http://cerldev.kek.jp/trac/EpicsUsersJP/attachment/wiki/intro/20181101_KEK/ET2018_StreamDevice_20181029.pdf>
+
 ## asyn driver
 
 ### 1. Download and extract the module
