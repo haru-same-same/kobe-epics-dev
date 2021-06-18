@@ -1,0 +1,152 @@
+OutTerminator = CR LF;
+InTerminator  = LF;
+
+SetAddress {
+  out ":ADDRess %u;";
+  in "OK";
+  @mismatch{;}
+}
+
+ResetAlarm {
+  out ":ALM:CLEar;";
+  in "OK";
+  @mismatch{;}
+}
+
+SetAlarmCC {
+  out ":ALM:CONTain:CC %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+SetAlarmCV {
+  out ":ALM:CONTain:CV %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryAlarmCC {
+  out ":ALM:CONTain:CC?;"
+  in "%b"
+  @mismatch{;}
+}
+
+QueryAlarmCV {
+  out ":ALM:CONTain:CV?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetOutDelayON {
+  out ":OUTPut:DELay:ON %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+SetOutDelayOFF {
+  out ":OUTPut:DELay:OFF %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryOutDelayON {
+  out ":OUTPut:DELay:ON?;"
+  in "%f"
+  @mismatch{;}
+}
+
+QueryOutDelayOFF {
+  out ":OUTPut:DELay:OFF?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetOutExternalMode {
+  out ":OUTPut:EXTernal:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryOutExternalMode {
+  out ":OUTPut:EXTernal:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetOutHotMode {
+  out ":OUTPut:EXTernal:HOT %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryOutHotMode {
+  out ":OUTPut:EXTernal:HOT?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetOutMode {
+  out ":OUTPut:EXTernal:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryOutMode {
+  out ":OUTPut:EXTernal:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetOutState {
+  out ":OUTPut:STATe %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryOutState {
+  out ":OUTPut:STATe?;"
+  in "%s"
+  @mismatch{;}
+}
+
+SetMeasureCorrectionMode {
+  out ":MEASure:CORRection:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryMeasureCorrectionMode {
+  out ":MEASure:CORRection:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetMeasureMVAV {
+  out ":MEASure:MVAV %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryMeasureMVAV {
+  out ":MEASure:MVAV?;"
+  in "%b"
+  @mismatch{;}
+}
+
+QueryMeasureCurrent {
+  out ":MEASure:CURRent?;"
+  in "%f"
+  @mismatch{;}
+}
+
+QueryMeasureVoltage {
+  out ":MEASure:VOLTage?;"
+  in "%f"
+  @mismatch{;}
+}
+
+QueryMeasureCurrent {
+  out ":MEASure:POWer?;"
+  in "%f"
+  @mismatch{;}
+}

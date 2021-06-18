@@ -1,0 +1,282 @@
+record(ao, "IPNS:QMAG1:SET:ADDRESS")
+{
+  field(DESC, "Setting device address")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetAddress PS1")
+}
+
+record(stringout, "IPNS:QMAG1:RESET:ALARM")
+{
+  field(DESC, "Reset alarms")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto ResetAlarm PS1")
+}
+
+record(bo, "IPNS:QMAG1:SET:ALM_CONT_CC")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "@QMag1.proto SetAlarmCC PS1")
+}
+
+record(bo, "IPNS:QMAG1:SET:ALM_CONT_CV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "@QMag1.proto SetAlarmCV PS1")
+}
+
+record(bi, "IPNS:QMAG1:QUERY:ALM_CONT_CC")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryAlarmCC PS1")
+}
+
+record(bi, "IPNS:QMAG1:QUERY:ALM_CONT_CV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryAlarmCV PS1")
+}
+
+record(ao, "IPNS:QMAG1:SET:OUT_DELAY_ON")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetOutDelayON PS1")
+}
+
+record(ao, "IPNS:QMAG1:SET:OUT_DELAY_OFF")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetOutDelayOFF PS1")
+}
+
+record(ai, "IPNS:QMAG1:QUERY:OUT_DELAY_ON")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryOutDelayON PS1")
+}
+
+record(ai, "IPNS:QMAG1:QUERY:OUT_DELAY_OFF")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryOutDelayOFF PS1")
+}
+
+record(mbbo, "IPNS:QMAG1:SET:OUT_EXT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "QMag1.proto SetOutExternalMode PS1")
+}
+
+record(mbbi, "IPNS:QMAG1:QUERY:OUT_EXT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "QMag1.proto QueryOutExternalMode PS1")
+}
+
+record(mbbo, "IPNS:QMAG1:SET:OUT_HOT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "QMag1.proto SetOutHotMode PS1")
+}
+
+record(mbbi, "IPNS:QMAG1:QUERY:OUT_HOT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "QMag1.proto QueryOutHotMode PS1")
+}
+
+record(mbbo, "IPNS:QMAG1:SET:OUT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(THVL, "3")
+  field(THST, "3")
+  field(FRVL, "4")
+  field(FRST, "4")
+  field(FVVL, "5")
+  field(FVST, "5")
+  field(SXVL, "6")
+  field(SXST, "6")
+  field(SVVL, "7")
+  field(SVST, "7")
+  field(OUT, "QMag1.proto SetOutMode PS1")
+}
+
+record(mbbi, "IPNS:QMAG1:QUERY:OUT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(THVL, "3")
+  field(THST, "3")
+  field(FRVL, "4")
+  field(FRST, "4")
+  field(FVVL, "5")
+  field(FVST, "5")
+  field(SXVL, "6")
+  field(SXST, "6")
+  field(SVVL, "7")
+  field(SVST, "7")
+  field(OUT, "QMag1.proto QueryOutMode PS1")
+}
+
+record(bo, "IPNS:QMAG1:SET:OUT_STATE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "QMag1.proto SetOutState PS1")
+}
+
+record(bi, "IPNS:QMAG1:QUERY:OUT_STATE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "QMag1.proto QueryOutState PS1")
+}
+
+record(mbbo, "IPNS:QMAG1:SET:MEASURE_CORR_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "QMag1.proto SetMeasureCorrectionMode PS1")
+}
+
+record(mbbi, "IPNS:QMAG1:QUERY:MEASURE_CORR_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "QMag1.proto QueryMeasureCorrectionMode PS1")
+}
+
+record(bo, "IPNS:QMAG1:SET:MEASURE_MVAV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "QMag1.proto SetMeasureMVAV PS1")
+}
+
+record(bi, "IPNS:QMAG1:QUERY:MEASURE_MVAV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "QMag1.proto QueryMeasureMVAV PS1")
+}
+
+record(ai, "IPNS:QMAG1:QUERY:MEASURE_CURRENT")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryMeasureCurrent PS1")
+}
+
+record(ai, "IPNS:QMAG1:QUERY:MEASURE_VOLTAGE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryMeasureVoltage PS1")
+}
+
+record(ai, "IPNS:QMAG1:QUERY:MEASURE_POWER")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QueryMeasurePower PS1")
+}
+
+
+
