@@ -1,11 +1,15 @@
 OutTerminator = CR LF;
 InTerminator  = LF;
 
+/* ADDRess */
+
 SetAddress {
   out ":ADDRess %u;";
   in "OK";
   @mismatch{;}
 }
+
+/* ALARM hierarchy */
 
 ResetAlarm {
   out ":ALM:CLEar;";
@@ -36,6 +40,8 @@ QueryAlarmCV {
   in "%b"
   @mismatch{;}
 }
+
+/* OUTPUT hierarchy */
 
 SetOutDelayON {
   out ":OUTPut:DELay:ON %f;"
@@ -109,6 +115,8 @@ QueryOutState {
   @mismatch{;}
 }
 
+/* MEASURE hierarchy */
+
 SetMeasureCorrectionMode {
   out ":MEASure:CORRection:MODE %b;"
   in "OK"
@@ -145,8 +153,333 @@ QueryMeasureVoltage {
   @mismatch{;}
 }
 
-QueryMeasureCurrent {
+QueryMeasurePower {
   out ":MEASure:POWer?;"
   in "%f"
   @mismatch{;}
 }
+
+/* SOURCE hierarchy */
+
+SetSourceCurrent {
+  out ":SOURce:CURRent %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceCurrent {
+  out ":SOURce:CURRent?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceOverCurrentProtection {
+  out ":SOURce:CURRent:PROTection %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceOverCurrentProtection {
+  out ":SOURce:CURRent:PROTection?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceCurrentSlewRise {
+  out ":SOURce:CURRent:SLEW:RISing %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceCurrentSlewRise {
+  out ":SOURce:CURRent:SLEW:RISing?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceCurrentSlewFall {
+  out ":SOURce:CURRent:SLEW:FALLing %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceCurrentSlewFall {
+  out ":SOURce:CURRent:SLEW:FALLing?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceMemoryRecall {
+  out ":SOURce:MEMory:RECall %c;"
+  in "OK"
+  @mismatch{;}
+}
+
+SetSourceMemoryRecallMode {
+  out ":SOURce:MEMory:RECall:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceMemoryRecallMode {
+  out ":SOURce:MEMory:RECall:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSourceMemoryStore {
+  out ":SOURce:MEMory:STORe %c;"
+  in "OK"
+  @mismatch{;}
+}
+
+SetSourceResistance {
+  out ":SOURce:RESistance %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceResistance {
+  out ":SOURce:RESistance?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceVoltage {
+  out ":SOURce:VOLTage %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceVoltage {
+  out ":SOURce:VOLTage?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceOverVoltageProtection {
+  out ":SOURce:VOLTage:PROTection %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceOverVoltageProtection {
+  out ":SOURce:VOLTage:PROTection?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceVoltageSlewRise {
+  out ":SOURce:VOLTage:SLEW:RISing %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceVoltageSlewRise {
+  out ":SOURce:VOLTage:SLEW:RISing?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSourceVoltageSlewFall {
+  out ":SOURce:VOLTage:SLEW:FALLing %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySourceVoltageSlewFall {
+  out ":SOURce:VOLTage:SLEW:FALLing?;"
+  in "%f"
+  @mismatch{;}
+}
+
+/* STATUS hierarchy */
+
+QueryStatusMeasureCondition {
+  out ":STATus:MEASure:CONDition?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetStatusOutputMode {
+  out ":STATus:OUTPut:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QueryStatusOutputMode {
+  out ":STATus:OUTPut:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+/* SYSTEM hierarchy */
+
+SetSystemCommunicateSerialBaud {
+  out ":SYSTem:COMMunicate:SERial:RECeive:BAUD %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemCommunicateSerialBaud {
+  out ":SYSTem:COMMunicate:SERial:RECeive:BAUD?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSystemCommunicateSerialPace {
+  out ":SYSTem:COMMunicate:SERial:RECeive:PACE %s;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemCommunicateSerialPace {
+  out ":SYSTem:COMMunicate:SERial:RECeive:PACE?;"
+  in "%s"
+  @mismatch{;}
+}
+
+SetSystemCommunicateSerialParityType {
+  out ":SYSTem:COMMunicate:SERial:RECeive:PARity:TYPE %s;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemCommunicateSerialParityType {
+  out ":SYSTem:COMMunicate:SERial:RECeive:PARity:TYPE?;"
+  in "%s"
+  @mismatch{;}
+}
+
+SetSystemCommunicateSerialUnit {
+  out ":SYSTem:COMMunicate:SERial:RECeive:UNIT %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemCommunicateSerialUnit {
+  out ":SYSTem:COMMunicate:SERial:RECeive:UNIT?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSystemControlCurrentMode {
+  out ":SYSTem:CONTrol:CURRent:MODE %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemControlCurrentMode {
+  out ":SYSTem:CONTrol:CURRent:MODE?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSystemControlCurrentIsolate {
+  out ":SYSTem:CONTrol:CURRent:ISOlate %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemControlCurrentIsolate {
+  out ":SYSTem:CONTrol:CURRent:ISOlate?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSystemControlVoltageMode {
+  out ":SYSTem:CONTrol:VOLTage:MODE %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemControlVoltageMode {
+  out ":SYSTem:CONTrol:VOLTage:MODE?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSystemControlVoltageIsolate {
+  out ":SYSTem:CONTrol:VOLTage:ISOlate %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemControlVoltageIsolate {
+  out ":SYSTem:CONTrol:VOLTage:ISOlate?;"
+  in "%b"
+  @mismatch{;}
+}
+
+QuerySystemError {
+  out ":SYSTem:ERRor?;"
+  in "%s"
+  @mismatch{;}
+}
+
+SetSystemKeylockMode {
+  out ":SYSTem:KEYLock:MODE %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemKeylockMode {
+  out ":SYSTem:KEYLock:MODE?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSystemMonitorMode {
+  out ":SYSTem:MONitor:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemMonitorMode {
+  out ":SYSTem:MONitor:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSystemPresetMode {
+  out ":SYSTem:PRESet:MODE %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemPresetMode {
+  out ":SYSTem:PRESet:MODE?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSystemSeries {
+  out ":SYSTem:SERies %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemSeries {
+  out ":SYSTem:SERies?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSystemTrip {
+  out ":SYSTem:TRIP;"
+  in "OK"
+  @mismatch{;}
+}
+
+SetSystemTripMode {
+  out ":SYSTem:TRIP:MODE %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemTripMode {
+  out ":SYSTem:TRIP:MODE?;"
+  in "%f"
+  @mismatch{;}
+}
+
