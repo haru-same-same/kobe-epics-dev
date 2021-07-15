@@ -640,24 +640,129 @@ record(bi, "IPNS:QMag1:QUERY:SYSTEM_SERIES"){
   field(OUT, "@QMag1.proto QuerySystemSeries PS1")
 }
 
-record(bo, "IPNS:QMag1:SET:SYSTEM:TRIP"){
+record(bo, "IPNS:QMag1:SET:SYSTEM_TRIP"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemTrip PS1")
 }
 
-record(ao, "IPNS:QMag1:SET:SYSTEM:TRIP_MODE"){
+record(ao, "IPNS:QMag1:SET:SYSTEM_TRIP_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemTripMode PS1")
 }
 
-record(ai, "IPNS:QMag1:QUERY:SYSTEM:TRIP_MODE"){
+record(ai, "IPNS:QMag1:QUERY:SYSTEM_TRIP_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto QuerySystemTripMode PS1")
 }
 
+record(bo, "IPNS:QMag1:SET:SYSTEM_BUZZER_BUTTON"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetSystemBuzzerButton PS1")
+}
+
+record(bi, "IPNS:QMag1:QUERY:SYSTEM_BUZZER_BUTTON"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QuerySystemBuzzerButton PS1")
+}
+
+record(bo, "IPNS:QMag1:SET:SYSTEM_BUZZER_ALARM"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetSystemBuzzerAlarm PS1")
+}
+
+record(bi, "IPNS:QMag1:QUERY:SYSTEM_BUZZER_ALARM"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QuerySystemBuzzerAlarm PS1")
+}
+
+record(ai, "IPNS:QMag1:QUERY:SYSTEM_POWER"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QuerySystemPower PS1")
+}
+
+record(stringin, "IPNS:QMag1:SET:SYSTEM_STORE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetSystemStore PS1")
+}
+
+# SEQUENCE hierarchy
+
+record(ao, "IPNS:QMag1:SET:SEQUENCE_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetSequenceMode PS1")
+}
+
+record(ai, "IPNS:QMag1:QUERY:SEQUENCE_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QuerySequenceMode PS1")
+}
+
+record(ao, "IPNS:QMag1:SET:SEQUENCE_RCOUNT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetSequenceRcount PS1")
+}
+
+record(ai, "IPNS:QMag1:QUERY:SEQUENCE_RCOUNT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QuerySequenceRcount PS1")
+}
+
+# To be filled
+record(ao, "IPNS:QMag1:SET:SEQUENCE_PATTERN"){
+  field(DESC, "")
+}
+
+# To be filled
+record(ai, "IPNS:QMag1:QUERY:SEQUENCE_PATTERN"){
+  field(DESC, "")
+}
+
+record(bo, "IPNS:QMag1:SET:SEQUENCE_STOP"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto SetSequenceStop PS1")
+}
+
+record(bi, "IPNS:QMag1:QUERY:SEQUENCE_STOP"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag1.proto QuerySequenceStop PS1")
+}
+
+# To be filled
+record(ao, "IPNS:QMag1:SET:SEQUENCE_STATUS"){
+  field(DESC, "")
+}
+
+# To be filled
+record(ai, "IPNS:QMag1:QUERY:SEQUENCE_STATUS"){
+  field(DESC, "")
+}

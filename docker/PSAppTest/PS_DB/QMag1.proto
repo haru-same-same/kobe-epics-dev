@@ -483,3 +483,99 @@ QuerySystemTripMode {
   @mismatch{;}
 }
 
+SetSystemBuzzerButton {
+  out ":SYSTem:BUZzer:BUTton %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemBuzzerButton {
+  out ":SYSTem:BUZzer:BUTton?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSystemBuzzerAlarm {
+  out ":SYSTem:BUZzer:ALArm %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySystemBuzzerAlarm {
+  out ":SYSTem:BUZzer:ALArm?;"
+  in "%b"
+  @mismatch{;}
+}
+
+QuerySystemPower {
+  out ":SYSTem:POWer?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSystemStore {
+  out ":SYSTem:STORe;"
+  in "OK"
+  @mismatch{;}
+}
+
+/* SEQUENCE hierarchy */
+
+SetSequenceMode {
+  out ":SEQuence:MODE %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySequenceMode {
+  out ":SEQuence:MODE?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSequenceRcount {
+  out ":SEQuence:RCOUnt %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySequenceRcount {
+  out ":SEQuence:RCOUnt?;"
+  in "%f"
+  @mismatch{;}
+}
+
+SetSequencePattern {
+  out ":SEQuence:PATTern %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySequencePattern {
+  out ":SEQuence:PATTern?;"
+  in "%f"
+  @mismatch{;}
+
+SetSequenceStop {
+  out ":SEQuence:STOP %b;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySequenceStop {
+  out ":SEQuence:STOP?;"
+  in "%b"
+  @mismatch{;}
+}
+
+SetSequenceStatus {
+  out ":SEQuence:STATus %f;"
+  in "OK"
+  @mismatch{;}
+}
+
+QuerySequenceStatus {
+  out ":SEQuence:STATus?;"
+  in "%f"
+  @mismatch{;}
+}
