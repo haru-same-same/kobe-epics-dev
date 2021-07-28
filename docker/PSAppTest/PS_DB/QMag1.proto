@@ -18,564 +18,565 @@ ResetAlarm {
 }
 
 SetAlarmCC {
-  out ":ALM:CONTain:CC %b;"
-  in "OK"
+  out ":ALM:CONTain:CC %b;";
+  in "OK";
   @mismatch{;}
 }
 
 SetAlarmCV {
-  out ":ALM:CONTain:CV %b;"
-  in "OK"
+  out ":ALM:CONTain:CV %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryAlarmCC {
-  out ":ALM:CONTain:CC?;"
-  in "%b"
+  out ":ALM:CONTain:CC?;";
+  in "%b";
   @mismatch{;}
 }
 
 QueryAlarmCV {
-  out ":ALM:CONTain:CV?;"
-  in "%b"
+  out ":ALM:CONTain:CV?;";
+  in "%b";
   @mismatch{;}
 }
 
 # OUTPUT hierarchy
 
 SetOutDelayON {
-  out ":OUTPut:DELay:ON %f;"
-  in "OK"
+  out ":OUTPut:DELay:ON %f;";
+  in "OK";
   @mismatch{;}
 }
 
 SetOutDelayOFF {
-  out ":OUTPut:DELay:OFF %f;"
-  in "OK"
+  out ":OUTPut:DELay:OFF %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryOutDelayON {
-  out ":OUTPut:DELay:ON?;"
-  in "%f"
+  out ":OUTPut:DELay:ON?;";
+  in "%f";
   @mismatch{;}
 }
 
 QueryOutDelayOFF {
-  out ":OUTPut:DELay:OFF?;"
-  in "%f"
+  out ":OUTPut:DELay:OFF?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetOutExternalMode {
-  out ":OUTPut:EXTernal:MODE %b;"
-  in "OK"
+  out ":OUTPut:EXTernal:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryOutExternalMode {
-  out ":OUTPut:EXTernal:MODE?;"
-  in "%b"
+  out ":OUTPut:EXTernal:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetOutHotMode {
-  out ":OUTPut:EXTernal:HOT %b;"
-  in "OK"
+  out ":OUTPut:EXTernal:HOT %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryOutHotMode {
-  out ":OUTPut:EXTernal:HOT?;"
-  in "%b"
+  out ":OUTPut:EXTernal:HOT?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetOutMode {
-  out ":OUTPut:EXTernal:MODE %b;"
-  in "OK"
+  out ":OUTPut:EXTernal:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryOutMode {
-  out ":OUTPut:EXTernal:MODE?;"
-  in "%b"
+  out ":OUTPut:EXTernal:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetOutState {
-  out ":OUTPut:STATe %b;"
-  in "OK"
+  out ":OUTPut:STATe %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryOutState {
-  out ":OUTPut:STATe?;"
-  in "%s"
+  out ":OUTPut:STATe?;";
+  in "%s";
   @mismatch{;}
 }
 
 # MEASURE hierarchy
 
 SetMeasureCorrectionMode {
-  out ":MEASure:CORRection:MODE %b;"
-  in "OK"
+  out ":MEASure:CORRection:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryMeasureCorrectionMode {
-  out ":MEASure:CORRection:MODE?;"
-  in "%b"
+  out ":MEASure:CORRection:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetMeasureMVAV {
-  out ":MEASure:MVAV %b;"
-  in "OK"
+  out ":MEASure:MVAV %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryMeasureMVAV {
-  out ":MEASure:MVAV?;"
-  in "%b"
+  out ":MEASure:MVAV?;";
+  in "%b";
   @mismatch{;}
 }
 
 QueryMeasureCurrent {
-  out ":MEASure:CURRent?;"
-  in "%f"
+  out ":MEASure:CURRent?;";
+  in "%f";
   @mismatch{;}
 }
 
 QueryMeasureVoltage {
-  out ":MEASure:VOLTage?;"
-  in "%f"
+  out ":MEASure:VOLTage?;";
+  in "%f";
   @mismatch{;}
 }
 
 QueryMeasurePower {
-  out ":MEASure:POWer?;"
-  in "%f"
+  out ":MEASure:POWer?;";
+  in "%f";
   @mismatch{;}
 }
 
 # SOURCE hierarchy
 
 SetSourceCurrent {
-  out ":SOURce:CURRent %f;"
-  in "OK"
+  out ":SOURce:CURRent %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceCurrent {
-  out ":SOURce:CURRent?;"
-  in "%f"
+  out ":SOURce:CURRent?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceOverCurrentProtection {
-  out ":SOURce:CURRent:PROTection %f;"
-  in "OK"
+  out ":SOURce:CURRent:PROTection %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceOverCurrentProtection {
-  out ":SOURce:CURRent:PROTection?;"
-  in "%f"
+  out ":SOURce:CURRent:PROTection?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceCurrentSlewRise {
-  out ":SOURce:CURRent:SLEW:RISing %f;"
-  in "OK"
+  out ":SOURce:CURRent:SLEW:RISing %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceCurrentSlewRise {
-  out ":SOURce:CURRent:SLEW:RISing?;"
-  in "%f"
+  out ":SOURce:CURRent:SLEW:RISing?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceCurrentSlewFall {
-  out ":SOURce:CURRent:SLEW:FALLing %f;"
-  in "OK"
+  out ":SOURce:CURRent:SLEW:FALLing %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceCurrentSlewFall {
-  out ":SOURce:CURRent:SLEW:FALLing?;"
-  in "%f"
+  out ":SOURce:CURRent:SLEW:FALLing?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceMemoryRecall {
-  out ":SOURce:MEMory:RECall %c;"
-  in "OK"
+  out ":SOURce:MEMory:RECall %c;";
+  in "OK";
   @mismatch{;}
 }
 
 SetSourceMemoryRecallMode {
-  out ":SOURce:MEMory:RECall:MODE %b;"
-  in "OK"
+  out ":SOURce:MEMory:RECall:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceMemoryRecallMode {
-  out ":SOURce:MEMory:RECall:MODE?;"
-  in "%b"
+  out ":SOURce:MEMory:RECall:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSourceMemoryStore {
-  out ":SOURce:MEMory:STORe %c;"
-  in "OK"
+  out ":SOURce:MEMory:STORe %c;";
+  in "OK";
   @mismatch{;}
 }
 
 SetSourceResistance {
-  out ":SOURce:RESistance %f;"
-  in "OK"
+  out ":SOURce:RESistance %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceResistance {
-  out ":SOURce:RESistance?;"
-  in "%f"
+  out ":SOURce:RESistance?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceVoltage {
-  out ":SOURce:VOLTage %f;"
-  in "OK"
+  out ":SOURce:VOLTage %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceVoltage {
-  out ":SOURce:VOLTage?;"
-  in "%f"
+  out ":SOURce:VOLTage?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceOverVoltageProtection {
-  out ":SOURce:VOLTage:PROTection %f;"
-  in "OK"
+  out ":SOURce:VOLTage:PROTection %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceOverVoltageProtection {
-  out ":SOURce:VOLTage:PROTection?;"
-  in "%f"
+  out ":SOURce:VOLTage:PROTection?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceVoltageSlewRise {
-  out ":SOURce:VOLTage:SLEW:RISing %f;"
-  in "OK"
+  out ":SOURce:VOLTage:SLEW:RISing %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceVoltageSlewRise {
-  out ":SOURce:VOLTage:SLEW:RISing?;"
-  in "%f"
+  out ":SOURce:VOLTage:SLEW:RISing?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSourceVoltageSlewFall {
-  out ":SOURce:VOLTage:SLEW:FALLing %f;"
-  in "OK"
+  out ":SOURce:VOLTage:SLEW:FALLing %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySourceVoltageSlewFall {
-  out ":SOURce:VOLTage:SLEW:FALLing?;"
-  in "%f"
+  out ":SOURce:VOLTage:SLEW:FALLing?;";
+  in "%f";
   @mismatch{;}
 }
 
 # STATUS hierarchy
 
 QueryStatusMeasureCondition {
-  out ":STATus:MEASure:CONDition?;"
-  in "%f"
+  out ":STATus:MEASure:CONDition?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetStatusOutputMode {
-  out ":STATus:OUTPut:MODE %b;"
-  in "OK"
+  out ":STATus:OUTPut:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QueryStatusOutputMode {
-  out ":STATus:OUTPut:MODE?;"
-  in "%b"
+  out ":STATus:OUTPut:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 # SYSTEM hierarchy
 
 SetSystemCommunicateSerialBaud {
-  out ":SYSTem:COMMunicate:SERial:RECeive:BAUD %f;"
-  in "OK"
+  out ":SYSTem:COMMunicate:SERial:RECeive:BAUD %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemCommunicateSerialBaud {
-  out ":SYSTem:COMMunicate:SERial:RECeive:BAUD?;"
-  in "%f"
+  out ":SYSTem:COMMunicate:SERial:RECeive:BAUD?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSystemCommunicateSerialPace {
-  out ":SYSTem:COMMunicate:SERial:RECeive:PACE %s;"
-  in "OK"
+  out ":SYSTem:COMMunicate:SERial:RECeive:PACE %s;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemCommunicateSerialPace {
-  out ":SYSTem:COMMunicate:SERial:RECeive:PACE?;"
-  in "%s"
+  out ":SYSTem:COMMunicate:SERial:RECeive:PACE?;";
+  in "%s";
   @mismatch{;}
 }
 
 SetSystemCommunicateSerialParityType {
-  out ":SYSTem:COMMunicate:SERial:RECeive:PARity:TYPE %s;"
-  in "OK"
+  out ":SYSTem:COMMunicate:SERial:RECeive:PARity:TYPE %s;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemCommunicateSerialParityType {
-  out ":SYSTem:COMMunicate:SERial:RECeive:PARity:TYPE?;"
-  in "%s"
+  out ":SYSTem:COMMunicate:SERial:RECeive:PARity:TYPE?;";
+  in "%s";
   @mismatch{;}
 }
 
 SetSystemCommunicateSerialUnit {
-  out ":SYSTem:COMMunicate:SERial:RECeive:UNIT %b;"
-  in "OK"
+  out ":SYSTem:COMMunicate:SERial:RECeive:UNIT %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemCommunicateSerialUnit {
-  out ":SYSTem:COMMunicate:SERial:RECeive:UNIT?;"
-  in "%b"
+  out ":SYSTem:COMMunicate:SERial:RECeive:UNIT?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSystemControlCurrentMode {
-  out ":SYSTem:CONTrol:CURRent:MODE %f;"
-  in "OK"
+  out ":SYSTem:CONTrol:CURRent:MODE %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemControlCurrentMode {
-  out ":SYSTem:CONTrol:CURRent:MODE?;"
-  in "%f"
+  out ":SYSTem:CONTrol:CURRent:MODE?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSystemControlCurrentIsolate {
-  out ":SYSTem:CONTrol:CURRent:ISOlate %b;"
-  in "OK"
+  out ":SYSTem:CONTrol:CURRent:ISOlate %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemControlCurrentIsolate {
-  out ":SYSTem:CONTrol:CURRent:ISOlate?;"
-  in "%b"
+  out ":SYSTem:CONTrol:CURRent:ISOlate?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSystemControlVoltageMode {
-  out ":SYSTem:CONTrol:VOLTage:MODE %f;"
-  in "OK"
+  out ":SYSTem:CONTrol:VOLTage:MODE %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemControlVoltageMode {
-  out ":SYSTem:CONTrol:VOLTage:MODE?;"
-  in "%f"
+  out ":SYSTem:CONTrol:VOLTage:MODE?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSystemControlVoltageIsolate {
-  out ":SYSTem:CONTrol:VOLTage:ISOlate %b;"
-  in "OK"
+  out ":SYSTem:CONTrol:VOLTage:ISOlate %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemControlVoltageIsolate {
-  out ":SYSTem:CONTrol:VOLTage:ISOlate?;"
-  in "%b"
+  out ":SYSTem:CONTrol:VOLTage:ISOlate?;";
+  in "%b";
   @mismatch{;}
 }
 
 QuerySystemError {
-  out ":SYSTem:ERRor?;"
-  in "%s"
+  out ":SYSTem:ERRor?;";
+  in "%s";
   @mismatch{;}
 }
 
 SetSystemKeylockMode {
-  out ":SYSTem:KEYLock:MODE %f;"
-  in "OK"
+  out ":SYSTem:KEYLock:MODE %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemKeylockMode {
-  out ":SYSTem:KEYLock:MODE?;"
-  in "%f"
+  out ":SYSTem:KEYLock:MODE?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSystemMonitorMode {
-  out ":SYSTem:MONitor:MODE %b;"
-  in "OK"
+  out ":SYSTem:MONitor:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemMonitorMode {
-  out ":SYSTem:MONitor:MODE?;"
-  in "%b"
+  out ":SYSTem:MONitor:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSystemPresetMode {
-  out ":SYSTem:PRESet:MODE %b;"
-  in "OK"
+  out ":SYSTem:PRESet:MODE %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemPresetMode {
-  out ":SYSTem:PRESet:MODE?;"
-  in "%b"
+  out ":SYSTem:PRESet:MODE?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSystemSeries {
-  out ":SYSTem:SERies %b;"
-  in "OK"
+  out ":SYSTem:SERies %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemSeries {
-  out ":SYSTem:SERies?;"
-  in "%b"
+  out ":SYSTem:SERies?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSystemTrip {
-  out ":SYSTem:TRIP;"
-  in "OK"
+  out ":SYSTem:TRIP;";
+  in "OK";
   @mismatch{;}
 }
 
 SetSystemTripMode {
-  out ":SYSTem:TRIP:MODE %f;"
-  in "OK"
+  out ":SYSTem:TRIP:MODE %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemTripMode {
-  out ":SYSTem:TRIP:MODE?;"
-  in "%f"
+  out ":SYSTem:TRIP:MODE?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSystemBuzzerButton {
-  out ":SYSTem:BUZzer:BUTton %b;"
-  in "OK"
+  out ":SYSTem:BUZzer:BUTton %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemBuzzerButton {
-  out ":SYSTem:BUZzer:BUTton?;"
-  in "%b"
+  out ":SYSTem:BUZzer:BUTton?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSystemBuzzerAlarm {
-  out ":SYSTem:BUZzer:ALArm %b;"
-  in "OK"
+  out ":SYSTem:BUZzer:ALArm %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySystemBuzzerAlarm {
-  out ":SYSTem:BUZzer:ALArm?;"
-  in "%b"
+  out ":SYSTem:BUZzer:ALArm?;";
+  in "%b";
   @mismatch{;}
 }
 
 QuerySystemPower {
-  out ":SYSTem:POWer?;"
-  in "%f"
+  out ":SYSTem:POWer?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSystemStore {
-  out ":SYSTem:STORe;"
-  in "OK"
+  out ":SYSTem:STORe;";
+  in "OK";
   @mismatch{;}
 }
 
 # SEQUENCE hierarchy
 
 SetSequenceMode {
-  out ":SEQuence:MODE %f;"
-  in "OK"
+  out ":SEQuence:MODE %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySequenceMode {
-  out ":SEQuence:MODE?;"
-  in "%f"
+  out ":SEQuence:MODE?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSequenceRcount {
-  out ":SEQuence:RCOUnt %f;"
-  in "OK"
+  out ":SEQuence:RCOUnt %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySequenceRcount {
-  out ":SEQuence:RCOUnt?;"
-  in "%f"
+  out ":SEQuence:RCOUnt?;";
+  in "%f";
   @mismatch{;}
 }
 
 SetSequencePattern {
-  out ":SEQuence:PATTern %f;"
-  in "OK"
+  out ":SEQuence:PATTern %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySequencePattern {
-  out ":SEQuence:PATTern?;"
-  in "%f"
+  out ":SEQuence:PATTern?;";
+  in "%f";
   @mismatch{;}
+}
 
 SetSequenceStop {
-  out ":SEQuence:STOP %b;"
-  in "OK"
+  out ":SEQuence:STOP %b;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySequenceStop {
-  out ":SEQuence:STOP?;"
-  in "%b"
+  out ":SEQuence:STOP?;";
+  in "%b";
   @mismatch{;}
 }
 
 SetSequenceStatus {
-  out ":SEQuence:STATus %f;"
-  in "OK"
+  out ":SEQuence:STATus %f;";
+  in "OK";
   @mismatch{;}
 }
 
 QuerySequenceStatus {
-  out ":SEQuence:STATus?;"
-  in "%f"
+  out ":SEQuence:STATus?;";
+  in "%f";
   @mismatch{;}
 }
