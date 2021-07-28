@@ -1,7 +1,7 @@
 OutTerminator = CR LF;
 InTerminator  = LF;
 
-/* ADDRess */
+# ADDRess
 
 SetAddress {
   out ":ADDRess %u;";
@@ -9,7 +9,7 @@ SetAddress {
   @mismatch{;}
 }
 
-/* ALARM hierarchy */
+# ALARM hierarchy
 
 ResetAlarm {
   out ":ALM:CLEar;";
@@ -41,7 +41,7 @@ QueryAlarmCV {
   @mismatch{;}
 }
 
-/* OUTPUT hierarchy */
+# OUTPUT hierarchy
 
 SetOutDelayON {
   out ":OUTPut:DELay:ON %f;"
@@ -115,7 +115,7 @@ QueryOutState {
   @mismatch{;}
 }
 
-/* MEASURE hierarchy */
+# MEASURE hierarchy
 
 SetMeasureCorrectionMode {
   out ":MEASure:CORRection:MODE %b;"
@@ -159,7 +159,7 @@ QueryMeasurePower {
   @mismatch{;}
 }
 
-/* SOURCE hierarchy */
+# SOURCE hierarchy
 
 SetSourceCurrent {
   out ":SOURce:CURRent %f;"
@@ -293,7 +293,7 @@ QuerySourceVoltageSlewFall {
   @mismatch{;}
 }
 
-/* STATUS hierarchy */
+# STATUS hierarchy
 
 QueryStatusMeasureCondition {
   out ":STATus:MEASure:CONDition?;"
@@ -313,7 +313,7 @@ QueryStatusOutputMode {
   @mismatch{;}
 }
 
-/* SYSTEM hierarchy */
+# SYSTEM hierarchy
 
 SetSystemCommunicateSerialBaud {
   out ":SYSTem:COMMunicate:SERial:RECeive:BAUD %f;"
@@ -519,7 +519,7 @@ SetSystemStore {
   @mismatch{;}
 }
 
-/* SEQUENCE hierarchy */
+# SEQUENCE hierarchy
 
 SetSequenceMode {
   out ":SEQuence:MODE %f;"
