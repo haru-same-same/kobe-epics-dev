@@ -13,6 +13,10 @@
 [PSApp IOC and archiver with Grafana image on docker](posts/PSApp_IOC_and_archiver_with_Grafana_image_on_docker.md)  
 [Install CAFE on Docker](posts/cafe_install.md)
 
+## Related repositories
+[ARTBLMagControl](https://github.com/haru-same-same/ARTBLMagControl)  
+[PSEmulator](https://github.com/haru-same-same/PSEmulator)
+
 ## Links
 
 [EPICS Home](https://epics-controls.org/)  
