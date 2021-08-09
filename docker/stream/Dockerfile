@@ -14,7 +14,8 @@ ENV EPICS_VER=3.15.8 \
 
 # Update yum and install necessary packages
 RUN apt update -y && apt upgrade -y && apt install -y \
-    libperl-dev
+    libperl-dev \
+    git
 
 # Download and install Asyn driver
 RUN mkdir ${WORK_DIR}/base-${EPICS_VER}/modules && cd $_ \
