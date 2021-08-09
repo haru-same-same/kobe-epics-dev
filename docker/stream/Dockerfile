@@ -1,5 +1,5 @@
 # Builder image
-FROM centos:7.9.2009 AS base
+FROM abes0/epics-base:latest
 
 # Maintainer
 LABEL maintainer="abes <abes@stu.kobe-u.ac.jp>"
@@ -10,25 +10,11 @@ ENV EPICS_VER=3.15.8 \
     EPICS_HOST_ARCH=linux-x86_64 \
     WORK_DIR=/usr/local/epics \
     MOD_DIR=${EPICS_BASE}/modules \
-    STREAM_DIR=${MOD_DIR}/StreamDevice \
-    APP_DIR=/PSApp
+    STREAM_DIR=${MOD_DIR}/StreamDevice
 
 # Update yum and install necessary packages
-RUN yum update -y && yum install -y \
-    wget \
-    gcc-c++ \
-    git \
-    readline-devel \
-    perl-devel \
-    make
-
-# Download and install epics base
-RUN mkdir ${WORK_DIR} && cd $_ \
-    && wget -q https://epics.anl.gov/download/base/base-${EPICS_VER}.tar.gz \
-    && tar -xf base-${EPICS_VER}.tar.gz \
-    && rm base-${EPICS_VER}.tar.gz \
-    && cd base-${EPICS_VER} \
-    && make
+RUN apt update -y && apt upgrade -y && apt install -y \
+    libperl-dev
 
 # Download and install Asyn driver
 RUN mkdir ${WORK_DIR}/base-${EPICS_VER}/modules && cd $_ \
@@ -50,10 +36,3 @@ RUN cd ${WORK_DIR}/base-${EPICS_VER}/modules \
     && sed -i "s|PCRE=\$(SUPPORT)/pcre-7-2|#PCRE=\$(SUPPORT)/pcre-7-2|g" StreamDevice/configure/RELEASE \
     && cd StreamDevice \
     && make
-
-# Expose port
-EXPOSE 5064-5065/tcp
-EXPOSE 5064-5065/udp
-
-# Execute command
-ENTRYPOINT ["/bin/bash"]
