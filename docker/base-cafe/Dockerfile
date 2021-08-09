@@ -1,5 +1,5 @@
 # Build from epics base image
-FROM abes0/epics-base:latest
+FROM abes0/epics-stream:latest
 
 # Maintainer
 LABEL maintainer="abes <abes@stu.kobe-u.ac.jp>"
