@@ -60,5 +60,6 @@ services:
       - '5064-5065/udp'
     stdin_open: true
     tty: true
+    entrypoint: '/bin/sh -c "cd /PSApp/iocBoot/iocPSClient && ./st.cmd"'
     restart: always
 
