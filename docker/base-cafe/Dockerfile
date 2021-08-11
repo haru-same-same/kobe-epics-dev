@@ -13,7 +13,7 @@ WORKDIR /home/
 # Install Cafe
 RUN apt update -y \
     && apt upgrade -y \
-    && apt install -y automake libtool libboost-dev cmake\
+    && apt install -y automake libtool libboost-dev cmake python3 python3-pip\
     && wget https://gitlab.psi.ch/cafe/cpp/-/archive/cafe-1.12.5/cpp-cafe-1.12.5.tar.gz \
     && tar -zxvf cpp-cafe-1.12.5.tar.gz \
     && cd cpp-cafe-1.12.5 \
@@ -27,7 +27,8 @@ RUN apt update -y \
     && make \
     && make install \
     && cd .. \
-    && rm -rf cpp-cafe-1.12.5.tar.gz cpp-cafe-1.12.5
+    && rm -rf cpp-cafe-1.12.5.tar.gz cpp-cafe-1.12.5 \
+    && pip3 install wheel pyepics pymysql #need for run EPICS <--> DB script
 
 # PATH
 ENV LD_LIBRARY_PATH=/opt/gfa/cafe/cpp/cafe-noqt-1.12.5-gcc-6.3.0/lib
