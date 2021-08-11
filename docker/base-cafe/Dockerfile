@@ -13,7 +13,7 @@ WORKDIR /home/
 # Install Cafe
 RUN apt update -y \
     && apt upgrade -y \
-    && apt install -y automake libtool libboost-dev cmake python3 python3-pip\
+    && apt install -y automake libtool libboost-dev cmake python3 python3-pip cron\
     && wget https://gitlab.psi.ch/cafe/cpp/-/archive/cafe-1.12.5/cpp-cafe-1.12.5.tar.gz \
     && tar -zxvf cpp-cafe-1.12.5.tar.gz \
     && cd cpp-cafe-1.12.5 \
