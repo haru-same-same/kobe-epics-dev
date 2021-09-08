@@ -28,7 +28,7 @@ RUN apt update -y \
     && make install \
     && cd .. \
     && rm -rf cpp-cafe-1.12.5.tar.gz cpp-cafe-1.12.5 \
-    && pip3 install wheel pyepics pymysql #need for run EPICS <--> DB script
+    && pip3 install wheel pyepics pymysql websocket_server #need for run EPICS <--> DB script
 
 # PATH
 ENV LD_LIBRARY_PATH=/opt/gfa/cafe/cpp/cafe-noqt-1.12.5-gcc-6.3.0/lib
