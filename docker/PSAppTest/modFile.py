@@ -12,7 +12,7 @@ def main():
     cmd_path = '/PSApp/iocBoot/iocPSClient/'
     
     # Dictionary of IP, port
-    ip_dict = {'PS1': '10.37.0.196:50001'}
+    ip_dict = {'PS1': '10.37.0.220:50001'}
     
     # Create list of .db and .proto file
     db_list = glob(db_path + '*.db')
