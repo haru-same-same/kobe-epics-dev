@@ -4,7 +4,7 @@
 
 # ADDRESS
 
-record(ao, "IPNS:QMAG1:SET:ADDRESS")
+record(ao, "ARTBL:QMAG1:SET:ADDRESS")
 {
   field(DESC, "Setting device address")
   field(DTYP, "stream")
@@ -14,7 +14,7 @@ record(ao, "IPNS:QMAG1:SET:ADDRESS")
 
 # ALARM hierarchy
 
-record(stringout, "IPNS:QMAG1:RESET:ALARM")
+record(stringout, "ARTBL:QMAG1:RESET:ALARM")
 {
   field(DESC, "Reset alarms")
   field(DTYP, "stream")
@@ -22,7 +22,7 @@ record(stringout, "IPNS:QMAG1:RESET:ALARM")
   field(OUT, "@QMag1.proto ResetAlarm PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:ALM_CONT_CC")
+record(bo, "ARTBL:QMAG1:SET:ALM_CONT_CC")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -32,7 +32,7 @@ record(bo, "IPNS:QMAG1:SET:ALM_CONT_CC")
   field(OUT, "@QMag1.proto SetAlarmCC PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:ALM_CONT_CV")
+record(bo, "ARTBL:QMAG1:SET:ALM_CONT_CV")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -42,7 +42,7 @@ record(bo, "IPNS:QMAG1:SET:ALM_CONT_CV")
   field(OUT, "@QMag1.proto SetAlarmCV PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:ALM_CONT_CC")
+record(bi, "ARTBL:QMAG1:QUERY:ALM_CONT_CC")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -50,7 +50,7 @@ record(bi, "IPNS:QMAG1:QUERY:ALM_CONT_CC")
   field(INP, "@QMag1.proto QueryAlarmCC PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:ALM_CONT_CV")
+record(bi, "ARTBL:QMAG1:QUERY:ALM_CONT_CV")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -60,7 +60,7 @@ record(bi, "IPNS:QMAG1:QUERY:ALM_CONT_CV")
 
 # OUTPUT hierarchy
 
-record(ao, "IPNS:QMAG1:SET:OUT_DELAY_ON")
+record(ao, "ARTBL:QMAG1:SET:OUT_DELAY_ON")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -68,7 +68,7 @@ record(ao, "IPNS:QMAG1:SET:OUT_DELAY_ON")
   field(OUT, "@QMag1.proto SetOutDelayON PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:OUT_DELAY_OFF")
+record(ao, "ARTBL:QMAG1:SET:OUT_DELAY_OFF")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -76,7 +76,7 @@ record(ao, "IPNS:QMAG1:SET:OUT_DELAY_OFF")
   field(OUT, "@QMag1.proto SetOutDelayOFF PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:OUT_DELAY_ON")
+record(ai, "ARTBL:QMAG1:QUERY:OUT_DELAY_ON")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -84,7 +84,7 @@ record(ai, "IPNS:QMAG1:QUERY:OUT_DELAY_ON")
   field(INP, "@QMag1.proto QueryOutDelayON PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:OUT_DELAY_OFF")
+record(ai, "ARTBL:QMAG1:QUERY:OUT_DELAY_OFF")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -92,7 +92,7 @@ record(ai, "IPNS:QMAG1:QUERY:OUT_DELAY_OFF")
   field(INP, "@QMag1.proto QueryOutDelayOFF PS1")
 }
 
-record(mbbo, "IPNS:QMAG1:SET:OUT_EXT_MODE")
+record(mbbo, "ARTBL:QMAG1:SET:OUT_EXT_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -106,7 +106,7 @@ record(mbbo, "IPNS:QMAG1:SET:OUT_EXT_MODE")
   field(OUT, "@QMag1.proto SetOutExternalMode PS1")
 }
 
-record(mbbi, "IPNS:QMAG1:QUERY:OUT_EXT_MODE")
+record(mbbi, "ARTBL:QMAG1:QUERY:OUT_EXT_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -120,7 +120,7 @@ record(mbbi, "IPNS:QMAG1:QUERY:OUT_EXT_MODE")
   field(INP, "@QMag1.proto QueryOutExternalMode PS1")
 }
 
-record(mbbo, "IPNS:QMAG1:SET:OUT_HOT_MODE")
+record(mbbo, "ARTBL:QMAG1:SET:OUT_HOT_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -134,7 +134,7 @@ record(mbbo, "IPNS:QMAG1:SET:OUT_HOT_MODE")
   field(OUT, "@QMag1.proto SetOutHotMode PS1")
 }
 
-record(mbbi, "IPNS:QMAG1:QUERY:OUT_HOT_MODE")
+record(mbbi, "ARTBL:QMAG1:QUERY:OUT_HOT_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -148,7 +148,7 @@ record(mbbi, "IPNS:QMAG1:QUERY:OUT_HOT_MODE")
   field(INP, "@QMag1.proto QueryOutHotMode PS1")
 }
 
-record(mbbo, "IPNS:QMAG1:SET:OUT_MODE")
+record(mbbo, "ARTBL:QMAG1:SET:OUT_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -172,7 +172,7 @@ record(mbbo, "IPNS:QMAG1:SET:OUT_MODE")
   field(OUT, "@QMag1.proto SetOutMode PS1")
 }
 
-record(mbbi, "IPNS:QMAG1:QUERY:OUT_MODE")
+record(mbbi, "ARTBL:QMAG1:QUERY:OUT_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -196,7 +196,7 @@ record(mbbi, "IPNS:QMAG1:QUERY:OUT_MODE")
   field(INP, "@QMag1.proto QueryOutMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:OUT_STATE")
+record(bo, "ARTBL:QMAG1:SET:OUT_STATE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -206,7 +206,7 @@ record(bo, "IPNS:QMAG1:SET:OUT_STATE")
   field(OUT, "@QMag1.proto SetOutState PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:OUT_STATE")
+record(bi, "ARTBL:QMAG1:QUERY:OUT_STATE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -218,7 +218,7 @@ record(bi, "IPNS:QMAG1:QUERY:OUT_STATE")
 
 # MEASURE hierarchy
 
-record(mbbo, "IPNS:QMAG1:SET:MEASURE_CORR_MODE")
+record(mbbo, "ARTBL:QMAG1:SET:MEASURE_CORR_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -232,7 +232,7 @@ record(mbbo, "IPNS:QMAG1:SET:MEASURE_CORR_MODE")
   field(OUT, "@QMag1.proto SetMeasureCorrectionMode PS1")
 }
 
-record(mbbi, "IPNS:QMAG1:QUERY:MEASURE_CORR_MODE")
+record(mbbi, "ARTBL:QMAG1:QUERY:MEASURE_CORR_MODE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -246,7 +246,7 @@ record(mbbi, "IPNS:QMAG1:QUERY:MEASURE_CORR_MODE")
   field(INP, "@QMag1.proto QueryMeasureCorrectionMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:MEASURE_MVAV")
+record(bo, "ARTBL:QMAG1:SET:MEASURE_MVAV")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -256,7 +256,7 @@ record(bo, "IPNS:QMAG1:SET:MEASURE_MVAV")
   field(OUT, "@QMag1.proto SetMeasureMVAV PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:MEASURE_MVAV")
+record(bi, "ARTBL:QMAG1:QUERY:MEASURE_MVAV")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -266,7 +266,7 @@ record(bi, "IPNS:QMAG1:QUERY:MEASURE_MVAV")
   field(INP, "@QMag1.proto QueryMeasureMVAV PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:MEASURE_CURRENT")
+record(ai, "ARTBL:QMAG1:QUERY:MEASURE_CURRENT")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -274,7 +274,7 @@ record(ai, "IPNS:QMAG1:QUERY:MEASURE_CURRENT")
   field(INP, "@QMag1.proto QueryMeasureCurrent PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:MEASURE_VOLTAGE")
+record(ai, "ARTBL:QMAG1:QUERY:MEASURE_VOLTAGE")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -282,7 +282,7 @@ record(ai, "IPNS:QMAG1:QUERY:MEASURE_VOLTAGE")
   field(INP, "@QMag1.proto QueryMeasureVoltage PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:MEASURE_POWER")
+record(ai, "ARTBL:QMAG1:QUERY:MEASURE_POWER")
 {
   field(DESC, "")
   field(DTYP, "stream")
@@ -292,56 +292,56 @@ record(ai, "IPNS:QMAG1:QUERY:MEASURE_POWER")
 
 # SOURCE hierarchy
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_CURRENT"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_CURRENT"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceCurrent PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_CURRENT"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_CURRENT"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceCurrent PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_OVERCURR_PROTECTION"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_OVERCURR_PROTECTION"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceOverCurrentProtection PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_OVERCURR_PROTECTION"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_OVERCURR_PROTECTION"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceOverCurrentProtection PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_CURR_SLEW_RISE"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_CURR_SLEW_RISE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceCurrentSlewRise PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_CURR_SLEW_RISE"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_CURR_SLEW_RISE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceCurrentSlewRise PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_CURR_SLEW_FALL"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_CURR_SLEW_FALL"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceCurrentSlewFall PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_CURR_SLEW_FALL"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_CURR_SLEW_FALL"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -349,18 +349,18 @@ record(ai, "IPNS:QMAG1:QUERY:SOURCE_CURR_SLEW_FALL"){
 }
 
 # To be filled
-#record(stringout, "IPNS:QMAG1:SET:SOURCE_MEM_RECALL"){
+#record(stringout, "ARTBL:QMAG1:SET:SOURCE_MEM_RECALL"){
 #  field(DESC, "")
 #}
 
-record(bo, "IPNS:QMAG1:SET:SOURCE_MEM_RECALL_MODE"){
+record(bo, "ARTBL:QMAG1:SET:SOURCE_MEM_RECALL_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceMemoryRecallMode PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SOURCE_MEM_RECALL_MODE"){
+record(bi, "ARTBL:QMAG1:QUERY:SOURCE_MEM_RECALL_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -368,74 +368,74 @@ record(bi, "IPNS:QMAG1:QUERY:SOURCE_MEM_RECALL_MODE"){
 }
 
 # To be filled
-#record(stringout, "IPNS:QMAG1:SET:SOURCE_MEM_STORE"){
+#record(stringout, "ARTBL:QMAG1:SET:SOURCE_MEM_STORE"){
 #  field(DESC, "")
 #}
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_RESISTANCE"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_RESISTANCE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceResistance PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_RESISTANCE"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_RESISTANCE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceResistance PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_VOLTAGE"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_VOLTAGE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceVoltage PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_VOLTAGE"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_VOLTAGE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceVoltage PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_OVERVOLT_PROTECTION"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_OVERVOLT_PROTECTION"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceOverVoltageProtection PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_OVERVOLT_PROTECTION"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_OVERVOLT_PROTECTION"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceOverVoltageProtection PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_VOLT_SLEW_RISE"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_VOLT_SLEW_RISE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceVoltageSlewRise PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_VOLT_SLEW_RISE"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_VOLT_SLEW_RISE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySourceVoltageSlewRise PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SOURCE_VOLT_SLEW_FALL"){
+record(ao, "ARTBL:QMAG1:SET:SOURCE_VOLT_SLEW_FALL"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSourceVoltageSlewFall PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SOURCE_VOLT_SLEW_FALL"){
+record(ai, "ARTBL:QMAG1:QUERY:SOURCE_VOLT_SLEW_FALL"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -445,18 +445,18 @@ record(ai, "IPNS:QMAG1:QUERY:SOURCE_VOLT_SLEW_FALL"){
 # STATUS hierarchy
 
 # To be filled
-#record(ai, "IPNS:QUERY:STATUS_MEASURE_CONDITION"){
+#record(ai, "ARTBL:QUERY:STATUS_MEASURE_CONDITION"){
 #  field(DESC, "")
 #}
 
-record(bo, "IPNS:QMAG1:SET:STATUS_OUTPUT_MODE"){
+record(bo, "ARTBL:QMAG1:SET:STATUS_OUTPUT_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetStatusOutputMode PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:STATUS_OUTPUT_MODE"){
+record(bi, "ARTBL:QMAG1:QUERY:STATUS_OUTPUT_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -465,238 +465,238 @@ record(bi, "IPNS:QMAG1:QUERY:STATUS_OUTPUT_MODE"){
 
 # SYSTEM hierarchy
 
-record(ao, "IPNS:QMAG1:SET:SYSTEM_COMM_SERIAL_BAUD"){
+record(ao, "ARTBL:QMAG1:SET:SYSTEM_COMM_SERIAL_BAUD"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemCommunicateSerialBaud PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SYSTEM_COMM_SERIAL_BAUD"){
+record(ai, "ARTBL:QMAG1:QUERY:SYSTEM_COMM_SERIAL_BAUD"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemCommunicateSerialBaud PS1")
 }
 
-record(stringout, "IPNS:QMAG1:SET:SYSTEM_COMM_SERIAL_PACE"){
+record(stringout, "ARTBL:QMAG1:SET:SYSTEM_COMM_SERIAL_PACE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemCommunicateSerialPace PS1")
 }
 
-record(stringin, "IPNS:QMAG1:QUERY:SYSTEM_COMM_SERIAL_PACE"){
+record(stringin, "ARTBL:QMAG1:QUERY:SYSTEM_COMM_SERIAL_PACE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemCommunicateSerialPace PS1")
 }
 
-record(stringout, "IPNS:QMAG1:SET:SYSTEM_COMM_SERIAL_PARITY_TYPE"){
+record(stringout, "ARTBL:QMAG1:SET:SYSTEM_COMM_SERIAL_PARITY_TYPE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemCommunicateSerialParityType PS1")
 }
 
-record(stringin, "IPNS:QMAG1:QUERY:SYSTEM_COMM_SERIAL_PARITY_TYPE"){
+record(stringin, "ARTBL:QMAG1:QUERY:SYSTEM_COMM_SERIAL_PARITY_TYPE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemCommunicateSerialParityType PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_COMM_SERIAL_UNIT"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_COMM_SERIAL_UNIT"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemCommunicateSerialUnit PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_COMM_SERIAL_UNIT"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_COMM_SERIAL_UNIT"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemCommunicateSerialUnit PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SYSTEM_CONTROL_CURRENT_MODE"){
+record(ao, "ARTBL:QMAG1:SET:SYSTEM_CONTROL_CURRENT_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemControlCurrentMode PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SYSTEM_CONTROL_CURRENT_MODE"){
+record(ai, "ARTBL:QMAG1:QUERY:SYSTEM_CONTROL_CURRENT_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemControlCurrentMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_CONTROL_CURRENT_ISOLATE"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_CONTROL_CURRENT_ISOLATE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemControlCurrentIsolate PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_CONTROL_CURRENT_ISOLATE"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_CONTROL_CURRENT_ISOLATE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemControlCurrentIsolate PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SYSTEM_CONTROL_VOLTAGE_MODE"){
+record(ao, "ARTBL:QMAG1:SET:SYSTEM_CONTROL_VOLTAGE_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemControlVoltageMode PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SYSTEM_CONTROL_VOLTAGE_MODE"){
+record(ai, "ARTBL:QMAG1:QUERY:SYSTEM_CONTROL_VOLTAGE_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemControlVoltageMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_CONTROL_VOLTAGE_ISOLATE"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_CONTROL_VOLTAGE_ISOLATE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemControlVoltageIsolate PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_CONTROL_VOLTAGE_ISOLATE"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_CONTROL_VOLTAGE_ISOLATE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemControlVoltageIsolate PS1")
 }
 
-record(stringin, "IPNS:QMAG1:QUERY:SYSTEM_ERROR"){
+record(stringin, "ARTBL:QMAG1:QUERY:SYSTEM_ERROR"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemError PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SYSTEM_KEYLOCK_MODE"){
+record(ao, "ARTBL:QMAG1:SET:SYSTEM_KEYLOCK_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemKeylockMode PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SYSTEM_KEYLOCK_MODE"){
+record(ai, "ARTBL:QMAG1:QUERY:SYSTEM_KEYLOCK_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemKeylockMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_MONITOR_MODE"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_MONITOR_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemMonitorMode PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_MONITOR_MODE"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_MONITOR_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemMonitorMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_PRESET_MODE"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_PRESET_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemPresetMode PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_PRESET_MODE"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_PRESET_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemPresetMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_SERIES"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_SERIES"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemSeries PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_SERIES"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_SERIES"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemSeries PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_TRIP"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_TRIP"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemTrip PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SYSTEM_TRIP_MODE"){
+record(ao, "ARTBL:QMAG1:SET:SYSTEM_TRIP_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemTripMode PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SYSTEM_TRIP_MODE"){
+record(ai, "ARTBL:QMAG1:QUERY:SYSTEM_TRIP_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemTripMode PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_BUZZER_BUTTON"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_BUZZER_BUTTON"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemBuzzerButton PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_BUZZER_BUTTON"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_BUZZER_BUTTON"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemBuzzerButton PS1")
 }
 
-record(bo, "IPNS:QMAG1:SET:SYSTEM_BUZZER_ALARM"){
+record(bo, "ARTBL:QMAG1:SET:SYSTEM_BUZZER_ALARM"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSystemBuzzerAlarm PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SYSTEM_BUZZER_ALARM"){
+record(bi, "ARTBL:QMAG1:QUERY:SYSTEM_BUZZER_ALARM"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemBuzzerAlarm PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SYSTEM_POWER"){
+record(ai, "ARTBL:QMAG1:QUERY:SYSTEM_POWER"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySystemPower PS1")
 }
 
-record(stringout, "IPNS:QMAG1:SET:SYSTEM_STORE"){
+record(stringout, "ARTBL:QMAG1:SET:SYSTEM_STORE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -705,28 +705,28 @@ record(stringout, "IPNS:QMAG1:SET:SYSTEM_STORE"){
 
 # SEQUENCE hierarchy
 
-record(ao, "IPNS:QMAG1:SET:SEQUENCE_MODE"){
+record(ao, "ARTBL:QMAG1:SET:SEQUENCE_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSequenceMode PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SEQUENCE_MODE"){
+record(ai, "ARTBL:QMAG1:QUERY:SEQUENCE_MODE"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(INP, "@QMag1.proto QuerySequenceMode PS1")
 }
 
-record(ao, "IPNS:QMAG1:SET:SEQUENCE_RCOUNT"){
+record(ao, "ARTBL:QMAG1:SET:SEQUENCE_RCOUNT"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSequenceRcount PS1")
 }
 
-record(ai, "IPNS:QMAG1:QUERY:SEQUENCE_RCOUNT"){
+record(ai, "ARTBL:QMAG1:QUERY:SEQUENCE_RCOUNT"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -734,23 +734,23 @@ record(ai, "IPNS:QMAG1:QUERY:SEQUENCE_RCOUNT"){
 }
 
 # To be filled
-#record(ao, "IPNS:QMAG1:SET:SEQUENCE_PATTERN"){
+#record(ao, "ARTBL:QMAG1:SET:SEQUENCE_PATTERN"){
 #  field(DESC, "")
 #}
 
 # To be filled
-#record(ai, "IPNS:QMAG1:QUERY:SEQUENCE_PATTERN"){
+#record(ai, "ARTBL:QMAG1:QUERY:SEQUENCE_PATTERN"){
 #  field(DESC, "")
 #}
 
-record(bo, "IPNS:QMAG1:SET:SEQUENCE_STOP"){
+record(bo, "ARTBL:QMAG1:SET:SEQUENCE_STOP"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
   field(OUT, "@QMag1.proto SetSequenceStop PS1")
 }
 
-record(bi, "IPNS:QMAG1:QUERY:SEQUENCE_STOP"){
+record(bi, "ARTBL:QMAG1:QUERY:SEQUENCE_STOP"){
   field(DESC, "")
   field(DTYP, "stream")
   field(SCAN, "Passive")
@@ -758,11 +758,11 @@ record(bi, "IPNS:QMAG1:QUERY:SEQUENCE_STOP"){
 }
 
 # To be filled
-#record(ao, "IPNS:QMAG1:SET:SEQUENCE_STATUS"){
+#record(ao, "ARTBL:QMAG1:SET:SEQUENCE_STATUS"){
 #  field(DESC, "")
 #}
 
 # To be filled
-#record(ai, "IPNS:QMAG1:QUERY:SEQUENCE_STATUS"){
+#record(ai, "ARTBL:QMAG1:QUERY:SEQUENCE_STATUS"){
 #  field(DESC, "")
 #}

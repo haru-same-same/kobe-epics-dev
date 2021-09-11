@@ -1,0 +1,768 @@
+#
+# Q Magnet 1 record database
+#
+
+# ADDRESS
+
+record(ao, "ARTBL:QMAG2:SET:ADDRESS")
+{
+  field(DESC, "Setting device address")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetAddress PS2")
+}
+
+# ALARM hierarchy
+
+record(stringout, "ARTBL:QMAG2:RESET:ALARM")
+{
+  field(DESC, "Reset alarms")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto ResetAlarm PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:ALM_CONT_CC")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "@QMag2.proto SetAlarmCC PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:ALM_CONT_CV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "@QMag2.proto SetAlarmCV PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:ALM_CONT_CC")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryAlarmCC PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:ALM_CONT_CV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryAlarmCV PS2")
+}
+
+# OUTPUT hierarchy
+
+record(ao, "ARTBL:QMAG2:SET:OUT_DELAY_ON")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetOutDelayON PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:OUT_DELAY_OFF")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetOutDelayOFF PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:OUT_DELAY_ON")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryOutDelayON PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:OUT_DELAY_OFF")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryOutDelayOFF PS2")
+}
+
+record(mbbo, "ARTBL:QMAG2:SET:OUT_EXT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "@QMag2.proto SetOutExternalMode PS2")
+}
+
+record(mbbi, "ARTBL:QMAG2:QUERY:OUT_EXT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(INP, "@QMag2.proto QueryOutExternalMode PS2")
+}
+
+record(mbbo, "ARTBL:QMAG2:SET:OUT_HOT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "@QMag2.proto SetOutHotMode PS2")
+}
+
+record(mbbi, "ARTBL:QMAG2:QUERY:OUT_HOT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(INP, "@QMag2.proto QueryOutHotMode PS2")
+}
+
+record(mbbo, "ARTBL:QMAG2:SET:OUT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(THVL, "3")
+  field(THST, "3")
+  field(FRVL, "4")
+  field(FRST, "4")
+  field(FVVL, "5")
+  field(FVST, "5")
+  field(SXVL, "6")
+  field(SXST, "6")
+  field(SVVL, "7")
+  field(SVST, "7")
+  field(OUT, "@QMag2.proto SetOutMode PS2")
+}
+
+record(mbbi, "ARTBL:QMAG2:QUERY:OUT_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(THVL, "3")
+  field(THST, "3")
+  field(FRVL, "4")
+  field(FRST, "4")
+  field(FVVL, "5")
+  field(FVST, "5")
+  field(SXVL, "6")
+  field(SXST, "6")
+  field(SVVL, "7")
+  field(SVST, "7")
+  field(INP, "@QMag2.proto QueryOutMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:OUT_STATE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "@QMag2.proto SetOutState PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:OUT_STATE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(INP, "@QMag2.proto QueryOutState PS2")
+}
+
+# MEASURE hierarchy
+
+record(mbbo, "ARTBL:QMAG2:SET:MEASURE_CORR_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(OUT, "@QMag2.proto SetMeasureCorrectionMode PS2")
+}
+
+record(mbbi, "ARTBL:QMAG2:QUERY:MEASURE_CORR_MODE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZRVL, "0")
+  field(ZRST, "0")
+  field(ONVL, "1")
+  field(ONST, "1")
+  field(TWVL, "2")
+  field(TWST, "2")
+  field(INP, "@QMag2.proto QueryMeasureCorrectionMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:MEASURE_MVAV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(OUT, "@QMag2.proto SetMeasureMVAV PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:MEASURE_MVAV")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(ZNAM, "OFF")
+  field(ONAM, "ON")
+  field(INP, "@QMag2.proto QueryMeasureMVAV PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:MEASURE_CURRENT")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryMeasureCurrent PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:MEASURE_VOLTAGE")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryMeasureVoltage PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:MEASURE_POWER")
+{
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryMeasurePower PS2")
+}
+
+# SOURCE hierarchy
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_CURRENT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceCurrent PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_CURRENT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceCurrent PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_OVERCURR_PROTECTION"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceOverCurrentProtection PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_OVERCURR_PROTECTION"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceOverCurrentProtection PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_CURR_SLEW_RISE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceCurrentSlewRise PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_CURR_SLEW_RISE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceCurrentSlewRise PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_CURR_SLEW_FALL"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceCurrentSlewFall PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_CURR_SLEW_FALL"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceCurrentSlewFall PS2")
+}
+
+# To be filled
+#record(stringout, "ARTBL:QMAG2:SET:SOURCE_MEM_RECALL"){
+#  field(DESC, "")
+#}
+
+record(bo, "ARTBL:QMAG2:SET:SOURCE_MEM_RECALL_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceMemoryRecallMode PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SOURCE_MEM_RECALL_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceMemoryRecallMode PS2")
+}
+
+# To be filled
+#record(stringout, "ARTBL:QMAG2:SET:SOURCE_MEM_STORE"){
+#  field(DESC, "")
+#}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_RESISTANCE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceResistance PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_RESISTANCE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceResistance PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_VOLTAGE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceVoltage PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_VOLTAGE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceVoltage PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_OVERVOLT_PROTECTION"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceOverVoltageProtection PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_OVERVOLT_PROTECTION"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceOverVoltageProtection PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_VOLT_SLEW_RISE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceVoltageSlewRise PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_VOLT_SLEW_RISE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceVoltageSlewRise PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SOURCE_VOLT_SLEW_FALL"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSourceVoltageSlewFall PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SOURCE_VOLT_SLEW_FALL"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySourceVoltageSlewFall PS2")
+}
+
+# STATUS hierarchy
+
+# To be filled
+#record(ai, "ARTBL:QUERY:STATUS_MEASURE_CONDITION"){
+#  field(DESC, "")
+#}
+
+record(bo, "ARTBL:QMAG2:SET:STATUS_OUTPUT_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetStatusOutputMode PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:STATUS_OUTPUT_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QueryStatusOutputMode PS2")
+}
+
+# SYSTEM hierarchy
+
+record(ao, "ARTBL:QMAG2:SET:SYSTEM_COMM_SERIAL_BAUD"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemCommunicateSerialBaud PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SYSTEM_COMM_SERIAL_BAUD"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemCommunicateSerialBaud PS2")
+}
+
+record(stringout, "ARTBL:QMAG2:SET:SYSTEM_COMM_SERIAL_PACE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemCommunicateSerialPace PS2")
+}
+
+record(stringin, "ARTBL:QMAG2:QUERY:SYSTEM_COMM_SERIAL_PACE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemCommunicateSerialPace PS2")
+}
+
+record(stringout, "ARTBL:QMAG2:SET:SYSTEM_COMM_SERIAL_PARITY_TYPE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemCommunicateSerialParityType PS2")
+}
+
+record(stringin, "ARTBL:QMAG2:QUERY:SYSTEM_COMM_SERIAL_PARITY_TYPE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemCommunicateSerialParityType PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_COMM_SERIAL_UNIT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemCommunicateSerialUnit PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_COMM_SERIAL_UNIT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemCommunicateSerialUnit PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SYSTEM_CONTROL_CURRENT_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemControlCurrentMode PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SYSTEM_CONTROL_CURRENT_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemControlCurrentMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_CONTROL_CURRENT_ISOLATE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemControlCurrentIsolate PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_CONTROL_CURRENT_ISOLATE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemControlCurrentIsolate PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SYSTEM_CONTROL_VOLTAGE_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemControlVoltageMode PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SYSTEM_CONTROL_VOLTAGE_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemControlVoltageMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_CONTROL_VOLTAGE_ISOLATE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemControlVoltageIsolate PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_CONTROL_VOLTAGE_ISOLATE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemControlVoltageIsolate PS2")
+}
+
+record(stringin, "ARTBL:QMAG2:QUERY:SYSTEM_ERROR"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemError PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SYSTEM_KEYLOCK_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemKeylockMode PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SYSTEM_KEYLOCK_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemKeylockMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_MONITOR_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemMonitorMode PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_MONITOR_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemMonitorMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_PRESET_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemPresetMode PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_PRESET_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemPresetMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_SERIES"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemSeries PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_SERIES"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemSeries PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_TRIP"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemTrip PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SYSTEM_TRIP_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemTripMode PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SYSTEM_TRIP_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemTripMode PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_BUZZER_BUTTON"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemBuzzerButton PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_BUZZER_BUTTON"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemBuzzerButton PS2")
+}
+
+record(bo, "ARTBL:QMAG2:SET:SYSTEM_BUZZER_ALARM"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemBuzzerAlarm PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SYSTEM_BUZZER_ALARM"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemBuzzerAlarm PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SYSTEM_POWER"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySystemPower PS2")
+}
+
+record(stringout, "ARTBL:QMAG2:SET:SYSTEM_STORE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSystemStore PS2")
+}
+
+# SEQUENCE hierarchy
+
+record(ao, "ARTBL:QMAG2:SET:SEQUENCE_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSequenceMode PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SEQUENCE_MODE"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySequenceMode PS2")
+}
+
+record(ao, "ARTBL:QMAG2:SET:SEQUENCE_RCOUNT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSequenceRcount PS2")
+}
+
+record(ai, "ARTBL:QMAG2:QUERY:SEQUENCE_RCOUNT"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySequenceRcount PS2")
+}
+
+# To be filled
+#record(ao, "ARTBL:QMAG2:SET:SEQUENCE_PATTERN"){
+#  field(DESC, "")
+#}
+
+# To be filled
+#record(ai, "ARTBL:QMAG2:QUERY:SEQUENCE_PATTERN"){
+#  field(DESC, "")
+#}
+
+record(bo, "ARTBL:QMAG2:SET:SEQUENCE_STOP"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT, "@QMag2.proto SetSequenceStop PS2")
+}
+
+record(bi, "ARTBL:QMAG2:QUERY:SEQUENCE_STOP"){
+  field(DESC, "")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(INP, "@QMag2.proto QuerySequenceStop PS2")
+}
+
+# To be filled
+#record(ao, "ARTBL:QMAG2:SET:SEQUENCE_STATUS"){
+#  field(DESC, "")
+#}
+
+# To be filled
+#record(ai, "ARTBL:QMAG2:QUERY:SEQUENCE_STATUS"){
+#  field(DESC, "")
+#}
