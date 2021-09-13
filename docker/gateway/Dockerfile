@@ -22,4 +22,4 @@ RUN cd ${WORK_DIR}/base-${EPICS_VER} \
 # PATH
 ENV PATH $PATH:/usr/local/epics/base-3.15.8/extensions/ca-gateway-2.1.2/bin/linux-x86_64
 
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
